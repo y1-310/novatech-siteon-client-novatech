@@ -1,2129 +1,985 @@
+<!-- v4.0 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
+  <meta name="color-scheme" content="light only">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SateOn（サイトオン）｜サロン・飲食店のホームページ制作｜月額9,800円〜</title>
-  <meta name="description" content="初期費用0円・月額9,800円から。サロン・飲食店・建築事務所・企業のプロ品質ホームページを最短即日で制作。更新はLINEで一言。">
-  <meta name="format-detection" content="telephone=no">
-  <link rel="canonical" href="https://siteon.jp/">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <meta property="og:title" content="SateOn（サイトオン）｜サロン・飲食店のホームページ制作｜月額9,800円〜">
-  <meta property="og:description" content="初期費用0円・月額9,800円から。サロン・飲食店・建築事務所・企業のプロ品質ホームページを最短即日で制作。更新はLINEで一言。">
-  <meta property="og:image" content="https://siteon.jp/assets/novatech-logo.png">
-  <meta property="og:url" content="https://siteon.jp/">
+  <title>NovaTech｜サロン・飲食店・士業のホームページ制作｜月額9,800円〜</title>
+  <meta name="description" content="初期費用0円・月額9,800円〜。美容室・飲食店・建築・士業に特化したプロ品質のホームページ制作サービス。最短1週間で公開。Lighthouse全項目90点以上。">
   <meta property="og:type" content="website">
+  <meta property="og:title" content="NovaTech｜プロ品質のホームページ制作｜月額9,800円〜">
+  <meta property="og:description" content="初期費用0円・月額9,800円〜。美容室・飲食店・建築・士業に特化したホームページ制作。最短1週間で公開。">
+  <meta property="og:image" content="https://siteon.jp/ogp.jpg">
+  <meta property="og:url" content="https://siteon.jp/">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preload" as="image" href="assets/hero-bg.jpg">
+  <link rel="canonical" href="https://siteon.jp/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:wght@500;600;700&display=swap">
-  </noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap"></noscript>
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "SateOn",
-      "provider": {
-        "@type": "Organization",
-        "name": "NovaTech"
-      },
-      "areaServed": "JP",
-      "priceRange": "¥9,800〜",
-      "url": "https://siteon.jp/"
-    }
+  {"@context":"https://schema.org","@type":"Organization","name":"NovaTech","url":"https://siteon.jp/","email":"novatech.siteon@gmail.com","description":"サロン・飲食店・士業に特化したホームページ制作サービス"}
   </script>
   <style>
     :root {
-      --bg: #FDFAF6;
-      --bg-alt: #F5EFE6;
-      --bg-dark: #2C2416;
-      --bg-hero: #1E1612;
-      --text: #1E1A14;
-      --text-mid: #5C5040;
-      --text-light: #8A7A6A;
-      --accent: #C4A265;
-      --accent-hover: #A8893E;
-      --line: #E8DDD0;
-      --white: #FFFFFF;
-      --line-brand: #06C755;
-      --bg-rgb: 253, 250, 246;
-      --bg-alt-rgb: 245, 239, 230;
-      --bg-dark-rgb: 44, 36, 22;
-      --bg-hero-rgb: 30, 22, 18;
-      --white-rgb: 255, 255, 255;
-      --accent-rgb: 196, 162, 101;
-      --text-rgb: 30, 26, 20;
-      --text-mid-rgb: 92, 80, 64;
-      --text-light-rgb: 138, 122, 106;
-      --line-rgb: 232, 221, 208;
-      --line-brand-rgb: 6, 199, 85;
-      --black-rgb: 0, 0, 0;
-      --shadow-soft: 0 20px 50px rgba(var(--text-rgb), 0.08);
-      --shadow-card: 0 18px 40px rgba(var(--text-rgb), 0.06);
-      --container: min(1120px, calc(100vw - 48px));
-      --header-h: 88px;
-      --section-space: 120px;
-      --r: 8px;
-      --nav-gap: 28px;
-      --ease: 320ms ease;
+      --bg: #FAFBFC;
+      --bg-alt: #F1F5F9;
+      --bg-dark: #0F172A;
+      --bg-accent: #EFF6FF;
+      --text: #0F172A;
+      --text-mid: #475569;
+      --text-light: #94A3B8;
+      --text-on-dark: #F1F5F9;
+      --text-on-accent: #1E40AF;
+      --accent: #2563EB;
+      --accent-hover: #1D4ED8;
+      --accent-soft: #DBEAFE;
+      --line: #E2E8F0;
+      --card-bg: #FFFFFF;
+      --card-shadow: 0 1px 3px rgba(15,23,42,.06), 0 1px 2px rgba(15,23,42,.04);
+      --card-shadow-hover: 0 10px 25px rgba(15,23,42,.08), 0 4px 10px rgba(15,23,42,.04);
+      --r: 16px;
+      --r-sm: 8px;
+      --r-lg: 24px;
+      --font: 'Noto Sans JP', sans-serif;
+      --section-py: 120px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    /* 日本語改行制御（japanese-copy-guide.md セクション13 準拠） */
-    h1, h2, h3,
-    .hero-copy,
-    .concept-text,
-    .section-title,
-    .section-title-en {
-      word-break: keep-all;
-      overflow-wrap: break-word;
-    }
-    h1, .hero-copy {
-      max-width: 18em;
-    }
-    h2 {
-      max-width: 22em;
-    }
-    p, li, dd {
-      word-break: normal;
-      overflow-wrap: break-word;
-      line-height: 2;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      background: var(--bg);
-    }
-
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; color-scheme: only light; }
     body {
-      margin: 0;
-      font-family: "Noto Sans JP", sans-serif;
+      font-family: var(--font);
+      background: var(--bg);
       color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(var(--accent-rgb), 0.10), transparent 26%),
-        linear-gradient(180deg, rgba(var(--bg-rgb), 1) 0%, rgba(var(--bg-rgb), 1) 100%);
-      line-height: 1.75;
-      letter-spacing: 0.02em;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
+      line-height: 1.7;
+      letter-spacing: .02em;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, h4 { word-break: keep-all; }
+
+    .container {
+      width: min(100% - 48px, 1160px);
+      margin-inline: auto;
     }
 
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
+    section { padding-block: var(--section-py); }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button,
-    input,
-    select,
-    textarea {
-      font: inherit;
-      color: inherit;
-    }
-
-    button {
-      border: 0;
-      background: none;
-      cursor: pointer;
-    }
-
-    .serif {
-      font-family: "Cormorant Garamond", serif;
-      letter-spacing: 0.03em;
-    }
-
-    .wrap {
-      width: var(--container);
-      margin: 0 auto;
-    }
-
-    .section {
-      padding: var(--section-space) 0;
-      border-top: 1px solid var(--line);
-      position: relative;
-    }
-
-    .section-alt {
-      background: rgba(var(--bg-alt-rgb), 0.88);
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 56px;
-      height: 1px;
-      background: var(--accent);
-    }
-
-    .section-heading {
-      display: grid;
-      gap: 12px;
-      margin-bottom: 48px;
-    }
-
-    .section-heading h2,
-    .section-heading h3 {
-      margin: 0;
-      font-size: clamp(2rem, 3vw, 3.4rem);
-      line-height: 1.08;
-      font-weight: 600;
-    }
-
-    .section-heading p {
-      margin: 0;
-      color: var(--text-mid);
-      font-size: 1rem;
-    }
-
+    /* Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      padding: 15px 24px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      font-weight: 700;
-      line-height: 1;
-      transition: transform var(--ease), opacity var(--ease), background-color var(--ease), color var(--ease), border-color var(--ease);
-      will-change: transform, opacity;
-    }
-
-    .btn:hover,
-    .btn:focus-visible {
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: var(--bg-dark);
-      box-shadow: 0 16px 30px rgba(var(--accent-rgb), 0.22);
-    }
-
-    .btn-primary:hover,
-    .btn-primary:focus-visible {
-      background: var(--accent-hover);
-    }
-
-    .btn-secondary {
-      border-color: rgba(var(--white-rgb), 0.22);
-      color: var(--white);
-      background: rgba(var(--white-rgb), 0.06);
-      backdrop-filter: blur(12px);
-    }
-
-    .btn-ghost {
-      border-color: rgba(var(--text-rgb), 0.12);
-      background: rgba(var(--white-rgb), 0.7);
-      color: var(--text);
-    }
-
-    .btn-line {
-      background: var(--line-brand);
-      color: var(--white);
-    }
-
-    .skip-link {
-      position: absolute;
-      left: 16px;
-      top: -48px;
-      background: var(--bg-dark);
-      color: var(--white);
-      padding: 12px 16px;
-      border-radius: var(--r);
-      z-index: 120;
-      transition: transform var(--ease), opacity var(--ease);
-    }
-
-    .skip-link:focus {
-      top: 16px;
-    }
-
-    .site-header {
-      position: fixed;
-      inset: 0 0 auto;
-      z-index: 100;
-      transition: background-color var(--ease), opacity var(--ease), transform var(--ease), border-color var(--ease), backdrop-filter var(--ease);
-      border-bottom: 1px solid transparent;
-    }
-
-    .site-header.is-scrolled {
-      background: rgba(var(--bg-rgb), 0.88);
-      backdrop-filter: blur(12px);
-      border-bottom-color: rgba(var(--text-rgb), 0.08);
-    }
-
-    .header-inner {
-      width: var(--container);
-      min-height: var(--header-h);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      min-width: 0;
-    }
-
-    .brand img {
-      width: 124px;
-      height: 44px;
-      object-fit: contain;
-    }
-
-    .brand-copy {
-      display: grid;
-      gap: 2px;
-      min-width: 0;
-    }
-
-    .brand-copy strong {
-      font-size: 0.95rem;
-      line-height: 1.2;
-    }
-
-    .brand-copy span {
-      font-size: 0.75rem;
-      color: var(--text-light);
-    }
-
-    .nav-toggle {
-      display: none;
-      width: 48px;
-      height: 48px;
-      border-radius: 999px;
-      border: 1px solid rgba(var(--text-rgb), 0.1);
-      background: rgba(var(--bg-rgb), 0.92);
-      color: var(--text);
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      z-index: 3;
-    }
-
-    .nav-toggle span,
-    .nav-toggle::before,
-    .nav-toggle::after {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 1px;
-      background: currentColor;
-      transition: transform var(--ease), opacity var(--ease);
-    }
-
-    .nav-toggle::before {
-      transform: translateY(-6px);
-    }
-
-    .nav-toggle::after {
-      transform: translateY(6px);
-    }
-
-    .nav-toggle[aria-expanded="true"] span {
-      opacity: 0;
-    }
-
-    .nav-toggle[aria-expanded="true"]::before {
-      transform: rotate(45deg);
-    }
-
-    .nav-toggle[aria-expanded="true"]::after {
-      transform: rotate(-45deg);
-    }
-
-    .site-nav {
-      justify-self: end;
-    }
-
-    .site-nav ul {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      gap: var(--nav-gap);
-      margin: 0;
-      padding: 0;
-    }
-
-    .site-nav a {
-      color: var(--text-mid);
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: transform var(--ease), opacity var(--ease), color var(--ease);
-    }
-
-    .site-nav a:hover,
-    .site-nav a:focus-visible {
-      color: var(--text);
-      transform: translateY(-1px);
-    }
-
-    .header-cta {
-      white-space: nowrap;
-    }
-
-    .hero {
-      padding: calc(var(--header-h) + 52px) 0 72px;
-      background:
-        linear-gradient(135deg, rgba(20, 14, 8, 0.72) 0%, rgba(20, 14, 8, 0.72) 100%),
-        url('assets/hero-bg.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: var(--white);
-      overflow: clip;
-      position: relative;
-    }
-    @media (max-width: 768px) {
-      .hero { background-attachment: scroll; }
-    }
-
-    .hero::before,
-    .hero::after {
-      content: "";
-      position: absolute;
-      pointer-events: none;
-      opacity: 0.7;
-    }
-
-    .hero::before {
-      inset: 120px auto auto -120px;
-      width: 420px;
-      height: 420px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(var(--accent-rgb), 0.18), transparent 70%);
-    }
-
-    .hero::after {
-      right: 4%;
-      bottom: 12%;
-      width: 240px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(var(--accent-rgb), 0.8), transparent);
-      box-shadow: 0 0 36px rgba(var(--accent-rgb), 0.38);
-      transform: rotate(-16deg);
-    }
-
-    .hero-grid {
-      width: var(--container);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 48px;
-      align-items: end;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-copy {
-      display: grid;
-      gap: 24px;
-      align-content: center;
-      min-height: 560px;
-      padding-right: 16px;
-    }
-
-    .hero-logo {
-      width: min(360px, 78%);
-      height: auto;
-    }
-
-    .hero-copy h1 {
-      margin: 0;
-      font-size: clamp(2.8rem, 6vw, 5.4rem);
-      line-height: 0.95;
-      font-weight: 600;
-      max-width: 11ch;
-    }
-
-    .hero-copy p {
-      margin: 0;
-      max-width: 560px;
-      color: rgba(var(--white-rgb), 0.76);
-      font-size: 1.08rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .hero-note {
-      display: grid;
-      gap: 18px;
-      align-self: end;
-      padding: 34px;
-      border-radius: 28px;
-      background:
-        linear-gradient(180deg, rgba(var(--white-rgb), 0.1), rgba(var(--white-rgb), 0.04)),
-        rgba(var(--white-rgb), 0.03);
-      border: 1px solid rgba(var(--white-rgb), 0.09);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 18px 40px rgba(var(--black-rgb), 0.22);
-    }
-
-    .hero-note strong {
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(var(--accent-rgb), 0.95);
-    }
-
-    .hero-note h2 {
-      margin: 0;
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      line-height: 1.02;
-      font-weight: 600;
-    }
-
-    .hero-note ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 14px;
-    }
-
-    .hero-note li {
-      padding: 0 0 0 18px;
-      position: relative;
-      color: rgba(var(--white-rgb), 0.8);
-    }
-
-    .hero-note li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.8em;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      transform: translateY(-50%);
-    }
-
-    .marquee {
-      overflow: hidden;
-      border-top: 1px solid rgba(var(--line-rgb), 0.9);
-      border-bottom: 1px solid rgba(var(--text-rgb), 0.06);
-      background: var(--bg-alt);
-      color: rgba(var(--text-rgb), 0.78);
-    }
-
-    .marquee-track {
-      display: flex;
-      width: max-content;
-      gap: 36px;
-      padding: 18px 0;
-      font-size: 0.95rem;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      animation: marquee 22s linear infinite;
-      will-change: transform;
-    }
-
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    .problem-grid,
-    .solution-grid,
-    .plan-grid,
-    .flow-grid,
-    .faq-grid,
-    .contact-grid,
-    .footer-grid {
-      display: grid;
-      gap: 24px;
-    }
-
-    .problem-grid {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-    }
-
-    .card {
-      background: rgba(var(--white-rgb), 0.84);
-      border: 1px solid rgba(var(--text-rgb), 0.07);
-      border-radius: 24px;
-      padding: 26px;
-      box-shadow: var(--shadow-card);
-    }
-
-    .problem-card {
-      display: grid;
-      gap: 18px;
-      min-height: 220px;
-    }
-
-    .problem-icon {
-      width: 54px;
-      height: 54px;
-      border-radius: 18px;
-      background: rgba(var(--accent-rgb), 0.12);
-      color: var(--accent-hover);
-      display: grid;
-      place-items: center;
-    }
-
-    .problem-card h3,
-    .solution-card h3,
-    .plan-card h3,
-    .flow-card h3 {
-      margin: 0;
-      font-size: 1.1rem;
-      line-height: 1.45;
-    }
-
-    .problem-card p,
-    .solution-card p,
-    .plan-card p,
-    .flow-card p,
-    .work-panel p,
-    .faq-intro,
-    .contact-copy p,
-    .footer-meta,
-    .footer-links a {
-      margin: 0;
-      color: var(--text-mid);
-    }
-
-    .solution-grid {
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      align-items: start;
-    }
-
-    .solution-lead {
-      padding: 34px;
-      border-radius: 32px;
-      background: linear-gradient(180deg, rgba(var(--accent-rgb), 0.12), rgba(var(--white-rgb), 0.86));
-      border: 1px solid rgba(var(--accent-rgb), 0.24);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .solution-lead p {
-      margin: 0;
-      font-size: 1.02rem;
-      color: var(--text-mid);
-    }
-
-    .solution-points {
-      display: grid;
-      gap: 20px;
-    }
-
-    .solution-card {
-      display: grid;
-      gap: 16px;
-      align-content: start;
-      min-height: 180px;
-    }
-
-    .solution-card strong {
-      color: var(--accent-hover);
-      font-size: 0.86rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .plan-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      align-items: stretch;
-    }
-
-    .plan-card {
-      position: relative;
-      padding: 30px;
-      display: grid;
-      gap: 22px;
-    }
-
-    .plan-card.popular {
-      background: linear-gradient(180deg, rgba(var(--accent-rgb), 0.16), rgba(var(--white-rgb), 0.88));
-      border-color: rgba(var(--accent-rgb), 0.35);
-      transform: translateY(-8px);
-    }
-
-    .plan-badge {
-      position: absolute;
-      right: 24px;
-      top: 24px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: var(--bg-dark);
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-    }
-
-    .plan-head {
-      display: grid;
       gap: 8px;
-      padding-right: 88px;
-    }
-
-    .plan-head p {
-      margin: 0;
-      color: var(--text-light);
-      font-size: 0.92rem;
-    }
-
-    .plan-price {
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
-      font-weight: 800;
-    }
-
-    .plan-price span:first-child {
-      font-size: 2.3rem;
-      line-height: 1;
-    }
-
-    .plan-price small {
-      color: var(--text-light);
-      font-size: 0.92rem;
-    }
-
-    .plan-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 12px;
-    }
-
-    .plan-list li {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(var(--text-rgb), 0.07);
-      color: var(--text-mid);
-      font-size: 0.95rem;
-    }
-
-    .plan-list strong {
-      color: var(--text);
-      font-weight: 700;
-    }
-
-    .plan-footer {
-      margin-top: auto;
-    }
-
-    .plans-note {
-      margin-top: 28px;
-      padding: 28px 30px;
-      border-radius: 24px;
-      background: rgba(var(--white-rgb), 0.82);
-      border: 1px solid rgba(var(--text-rgb), 0.07);
-      box-shadow: var(--shadow-card);
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .plans-note p {
-      margin: 0;
-      color: var(--text-mid);
-    }
-
-    .works-lead {
-      margin-top: -20px;
-      margin-bottom: 28px;
-      display: grid;
-      gap: 6px;
-    }
-
-    .works-note {
-      margin: 0;
-      color: var(--text-mid);
+      padding: 14px 28px;
+      border-radius: var(--r-sm);
       font-size: 1rem;
       font-weight: 700;
-    }
-
-    .works-subnote {
-      margin: 0;
-      color: var(--text-light);
-      font-size: 0.92rem;
-    }
-
-    .works-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-
-    .work-tab {
-      padding: 12px 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(var(--text-rgb), 0.1);
-      background: rgba(var(--white-rgb), 0.82);
-      color: var(--text-mid);
-      font-weight: 700;
-      transition: transform var(--ease), opacity var(--ease), background-color var(--ease), color var(--ease), border-color var(--ease);
-    }
-
-    .work-tab[aria-selected="true"] {
-      background: var(--accent);
-      color: var(--bg-dark);
-      border-color: transparent;
-    }
-
-    .work-panels {
-      display: grid;
-      gap: 24px;
-    }
-
-    .work-panel {
-      display: grid;
-      grid-template-columns: minmax(0, 7fr) minmax(260px, 3fr);
-      gap: 28px;
-      align-items: center;
-      padding: 28px;
-      border-radius: 28px;
-      background: rgba(var(--white-rgb), 0.84);
-      border: 1px solid rgba(var(--text-rgb), 0.07);
-      box-shadow: var(--shadow-card);
-    }
-
-    .work-panel[hidden] {
-      display: none;
-    }
-
-    .work-visual {
-      min-width: 0;
-    }
-
-    .browser-mockup {
-      overflow: hidden;
-      border-radius: 22px;
-      border: 1px solid rgba(var(--text-rgb), 0.08);
-      background: rgba(var(--bg-rgb), 0.96);
-      box-shadow: 0 16px 34px rgba(var(--text-rgb), 0.08);
-    }
-
-    .browser-bar {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 14px 18px;
-      background: rgba(var(--bg-alt-rgb), 0.92);
-      border-bottom: 1px solid rgba(var(--text-rgb), 0.08);
-    }
-
-    .browser-dots {
-      display: inline-flex;
-      gap: 8px;
-      flex-shrink: 0;
-    }
-
-    .browser-dots span {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: rgba(var(--text-light-rgb), 0.62);
-    }
-
-    .browser-dots span:first-child {
-      background: rgba(var(--accent-rgb), 0.88);
-    }
-
-    .browser-dots span:nth-child(2) {
-      background: rgba(var(--text-mid-rgb), 0.34);
-    }
-
-    .browser-address {
-      flex: 1;
-      min-width: 0;
-      padding: 10px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(var(--text-rgb), 0.08);
-      background: rgba(var(--bg-rgb), 0.92);
-      color: var(--text-light);
-      font-size: 0.82rem;
-      line-height: 1;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .browser-screen {
-      background: var(--bg);
-    }
-
-    .browser-screen img {
-      width: 100%;
-      height: auto;
-    }
-
-    .work-copy {
-      display: grid;
-      gap: 16px;
-    }
-
-    .work-copy h3 {
-      margin: 0;
-      font-size: clamp(1.8rem, 2.4vw, 2.6rem);
-      line-height: 1.08;
-      font-weight: 600;
-    }
-
-    .work-copy strong {
-      font-size: 0.84rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent-hover);
-    }
-
-    .work-copy ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 12px;
-      color: var(--text-mid);
-    }
-
-    .work-copy li {
-      padding-left: 18px;
-      position: relative;
-    }
-
-    .work-copy li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.82em;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent);
-      transform: translateY(-50%);
-    }
-
-    .flow-grid {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .flow-card {
-      min-height: 250px;
-      display: grid;
-      gap: 18px;
-      align-content: start;
-    }
-
-    .flow-number {
-      font-size: 0.9rem;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent-hover);
-    }
-
-    .about-inner {
-      display: grid;
-      grid-template-columns: minmax(280px, 0.42fr) minmax(0, 0.58fr);
-      gap: 32px;
-      align-items: center;
-    }
-
-    .about-photo {
-      overflow: hidden;
-      border-radius: 28px;
-      border: 1px solid rgba(var(--text-rgb), 0.08);
-      box-shadow: var(--shadow-card);
-      background: rgba(var(--bg-rgb), 0.94);
-    }
-
-    .about-copy {
-      display: grid;
-      gap: 18px;
-    }
-
-    .about-role {
-      margin: -8px 0 0;
-      color: var(--accent-hover);
-      font-size: 0.92rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .about-copy p {
-      margin: 0;
-      color: var(--text-mid);
-    }
-
-    .about-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-
-    .about-tags li {
-      padding: 9px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(var(--text-rgb), 0.08);
-      background: rgba(var(--bg-rgb), 0.72);
-      color: var(--text-mid);
-      font-size: 0.88rem;
-      font-weight: 700;
-    }
-
-    .faq-intro {
-      margin-bottom: 24px;
-      max-width: 660px;
-    }
-
-    .faq-grid {
-      gap: 14px;
-    }
-
-    .faq-item {
-      background: rgba(var(--white-rgb), 0.84);
-      border: 1px solid rgba(var(--text-rgb), 0.07);
-      border-radius: 18px;
-      box-shadow: var(--shadow-card);
-      overflow: hidden;
-    }
-
-    .faq-item summary {
-      list-style: none;
+      font-family: var(--font);
       cursor: pointer;
-      padding: 22px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      font-weight: 700;
+      transition: background .2s, color .2s, transform .15s, box-shadow .2s;
+      border: 2px solid transparent;
+      text-align: center;
     }
+    .btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(37,99,235,.3); }
+    .btn-outline { background: transparent; color: var(--accent); border-color: var(--accent); }
+    .btn-outline:hover { background: var(--accent-soft); }
+    .btn-outline-white { background: transparent; color: #fff; border-color: #fff; }
+    .btn-outline-white:hover { background: rgba(255,255,255,.1); }
+    .btn-lg { padding: 16px 36px; font-size: 1.05rem; }
 
-    .faq-item summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .faq-item summary::after {
-      content: "+";
-      color: var(--accent-hover);
-      font-size: 1.5rem;
-      line-height: 1;
-      transition: transform var(--ease), opacity var(--ease);
-    }
-
-    .faq-item[open] summary::after {
-      transform: rotate(45deg);
-    }
-
-    .faq-body {
-      padding: 0 24px 24px;
-      color: var(--text-mid);
-    }
-
-    .contact-grid {
-      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-      align-items: start;
-    }
-
-    .contact-copy {
-      display: grid;
-      gap: 18px;
-    }
-
-    .contact-points {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 14px;
-    }
-
-    .contact-points li {
-      padding-left: 18px;
-      position: relative;
-      color: var(--text-mid);
-    }
-
-    .contact-points li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.8em;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      transform: translateY(-50%);
-    }
-
-    .contact-form {
-      background: rgba(var(--white-rgb), 0.86);
-      border: 1px solid rgba(var(--text-rgb), 0.07);
-      border-radius: 28px;
-      padding: 30px;
-      box-shadow: var(--shadow-soft);
-      display: grid;
-      gap: 18px;
-    }
-
-    .form-note {
-      margin: 0;
-      color: var(--text-light);
-      font-size: 0.9rem;
-    }
-
-    .field {
-      display: grid;
-      gap: 8px;
-    }
-
-    .field label {
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-
-    .field input,
-    .field select,
-    .field textarea {
-      width: 100%;
-      border-radius: 14px;
-      border: 1px solid rgba(var(--text-rgb), 0.12);
-      background: rgba(var(--bg-rgb), 0.96);
-      padding: 15px 16px;
-      transition: transform var(--ease), opacity var(--ease), border-color var(--ease);
-    }
-
-    .field input:focus,
-    .field select:focus,
-    .field textarea:focus {
-      outline: none;
-      border-color: rgba(var(--accent-rgb), 0.7);
-    }
-
-    .field textarea {
-      min-height: 168px;
-      resize: vertical;
-    }
-
-    .contact-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-    }
-
-    .privacy-link {
-      color: var(--text-mid);
-      text-decoration: underline;
-      text-underline-offset: 0.16em;
-    }
-
-    .pre-footer {
-      border-top: 1px solid var(--line);
-      padding: 40px 0;
-      background: linear-gradient(180deg, rgba(var(--accent-rgb), 0.08), rgba(var(--bg-rgb), 1));
-    }
-
-    .pre-footer-inner {
-      width: var(--container);
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .pre-footer-copy h2 {
-      margin: 0 0 8px;
-      font-size: clamp(1.9rem, 3vw, 2.8rem);
-      line-height: 1.08;
-      font-weight: 600;
-    }
-
-    .pre-footer-copy p {
-      margin: 0;
-      color: var(--text-mid);
-    }
-
-    .site-footer {
-      background: var(--bg-dark);
-      color: rgba(var(--white-rgb), 0.86);
-      padding: 48px 0 28px;
-    }
-
-    .footer-grid {
-      grid-template-columns: 1.1fr 0.9fr 0.8fr;
-      align-items: start;
-    }
-
-    .footer-brand {
-      display: grid;
-      gap: 16px;
-    }
-
-    .footer-brand img {
-      width: 118px;
-      height: 42px;
-      object-fit: contain;
-    }
-
-    .footer-title {
-      margin: 0;
-      font-weight: 700;
-      color: var(--white);
-    }
-
-    .footer-links,
-    .footer-social {
-      display: grid;
-      gap: 12px;
-    }
-
-    .footer-links strong,
-    .footer-social strong {
-      color: var(--accent);
-      font-size: 0.82rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .footer-links nav,
-    .footer-social nav {
-      display: grid;
-      gap: 10px;
-    }
-
-    .footer-links a,
-    .footer-social a {
-      color: rgba(var(--white-rgb), 0.78);
-      transition: transform var(--ease), opacity var(--ease), color var(--ease);
-    }
-
-    .footer-links a:hover,
-    .footer-links a:focus-visible,
-    .footer-social a:hover,
-    .footer-social a:focus-visible {
-      color: var(--white);
-      transform: translateY(-1px);
-    }
-
-    .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-top: 36px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(var(--white-rgb), 0.1);
-    }
-
-    .footer-bottom small,
-    .footer-bottom a {
-      color: rgba(var(--white-rgb), 0.62);
-    }
-
-    .mobile-sticky {
-      display: none;
-      position: fixed;
-      inset: auto 0 0;
-      z-index: 110;
-      padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
-      background: rgba(var(--bg-alt-rgb), 0.96);
-      backdrop-filter: blur(12px);
-      border-top: 1px solid rgba(var(--line-rgb), 0.92);
-    }
-
-    .mobile-sticky .btn {
-      width: 100%;
-    }
-
+    /* Fade-in */
     .fade-in {
       opacity: 0;
-      transform: translateY(24px);
-      transition: transform 380ms ease, opacity 380ms ease;
-      will-change: transform, opacity;
+      transform: translateY(20px);
+      transition: opacity .6s ease, transform .6s ease;
     }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-    .fade-in.is-visible {
-      opacity: 1;
-      transform: translateY(0);
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 1000;
+      padding: 16px 0;
+      transition: background .3s, border-bottom .3s, box-shadow .3s;
     }
-
-    .js .works-tabs,
-    .js .tab-enhanced .work-panel {
-      display: none;
+    header.scrolled {
+      background: rgba(250,251,252,.95);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 1px 8px rgba(15,23,42,.05);
     }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-size: 1.3rem; font-weight: 800; color: var(--text); letter-spacing: -.02em; }
+    .logo span { color: var(--accent); }
+    nav { display: flex; align-items: center; gap: 28px; }
+    nav a { font-size: .9rem; font-weight: 500; color: var(--text-mid); transition: color .2s; }
+    nav a:hover { color: var(--accent); }
+    .header-cta { padding: 10px 20px; font-size: .9rem; }
 
-    .js .tab-enhanced .works-tabs {
-      display: flex;
+    /* ===== 1. HERO ===== */
+    #hero {
+      padding-top: 120px;
+      padding-bottom: var(--section-py);
+      background: var(--bg);
     }
-
-    .js .tab-enhanced .work-panel.is-active {
+    .hero-inner {
       display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-label {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--text-on-accent);
+      font-size: .85rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+    .hero-copy h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+    .hero-copy p { font-size: 1rem; color: var(--text-mid); line-height: 1.8; margin-bottom: 32px; }
+    .hero-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+    .hero-assurance { display: flex; gap: 16px; flex-wrap: wrap; font-size: .85rem; color: var(--text-light); }
+    .hero-assurance span { color: var(--accent); font-weight: 600; }
+
+    /* Browser Mockup */
+    .hero-visual { position: relative; padding-bottom: 24px; padding-right: 24px; }
+    .mockup-browser {
+      background: var(--card-bg);
+      border-radius: var(--r-lg);
+      box-shadow: var(--card-shadow-hover);
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+    .mockup-bar {
+      background: #F8FAFC;
+      border-bottom: 1px solid var(--line);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .mockup-dots { display: flex; gap: 6px; }
+    .mockup-dots span { width: 10px; height: 10px; border-radius: 50%; background: var(--line); }
+    .mockup-url {
+      flex: 1;
+      background: var(--bg-alt);
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-size: .72rem;
+      color: var(--text-light);
+    }
+    .mockup-screen { width: 100%; display: block; aspect-ratio: 16/10; object-fit: cover; }
+    .mockup-phone {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 28%;
+      background: var(--card-bg);
+      border-radius: 14px;
+      box-shadow: var(--card-shadow-hover);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+    .mockup-phone-notch {
+      background: #F8FAFC;
+      border-bottom: 1px solid var(--line);
+      padding: 7px 10px;
+      text-align: center;
+      font-size: .65rem;
+      color: var(--text-light);
+    }
+    .mockup-phone img { width: 100%; aspect-ratio: 9/16; object-fit: cover; }
+
+    /* ===== 2. SOCIAL PROOF ===== */
+    #social-proof {
+      padding-block: 40px;
+      background: var(--bg-accent);
+    }
+    .proof-grid { display: flex; justify-content: center; flex-wrap: wrap; }
+    .proof-item {
+      flex: 1;
+      min-width: 130px;
+      text-align: center;
+      padding: 0 32px;
+      border-right: 1px solid rgba(37,99,235,.15);
+    }
+    .proof-item:last-child { border-right: none; }
+    .proof-num {
+      display: block;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .proof-label { font-size: .85rem; color: var(--text-mid); }
+
+    /* ===== 3. お悩み ===== */
+    #pain { background: var(--bg); }
+    .pain-inner {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .pain-copy h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; line-height: 1.3; margin-bottom: 20px; }
+    .pain-copy p { color: var(--text-mid); line-height: 1.8; }
+    .checklist { display: flex; flex-direction: column; gap: 12px; }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--card-bg);
+      border-radius: var(--r-sm);
+      padding: 16px 20px;
+      border: 1px solid var(--line);
+    }
+    .check-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .check-icon svg { width: 12px; height: 12px; stroke: var(--accent); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .check-item p { font-size: .95rem; color: var(--text); line-height: 1.6; }
+
+    /* ===== 4. SHOWCASE ===== */
+    #showcase { background: var(--bg-alt); }
+    .showcase-head { text-align: center; margin-bottom: 56px; }
+    .showcase-head h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; margin-bottom: 12px; }
+    .showcase-head p { color: var(--text-mid); }
+    .showcase-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .demo-card {
+      background: var(--card-bg);
+      border-radius: var(--r);
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .demo-card:hover { transform: translateY(-4px); box-shadow: var(--card-shadow-hover); }
+    .demo-card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; }
+    .demo-card-body { padding: 20px 24px; }
+    .demo-genre { font-size: .8rem; font-weight: 600; color: var(--accent); letter-spacing: .06em; margin-bottom: 6px; }
+    .demo-name { font-size: 1.15rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .demo-desc { font-size: .9rem; color: var(--text-mid); }
+
+    /* ===== 5. 選ばれる理由 ===== */
+    #reasons { background: var(--bg); }
+    .reasons-head { margin-bottom: 72px; }
+    .reasons-head h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; }
+    .feature-list { display: flex; flex-direction: column; gap: 80px; }
+    .feature { display: flex; align-items: center; gap: 80px; }
+    .feature:nth-child(even) { flex-direction: row-reverse; }
+    .feature-visual {
+      flex: 0 0 360px;
+      height: 260px;
+      background: var(--bg-accent);
+      border-radius: var(--r-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .feature-icon-wrap {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .feature-icon-wrap svg { width: 44px; height: 44px; stroke: var(--accent); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .feature-body { flex: 1; }
+    .feature-num { display: block; font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 12px; line-height: 1; }
+    .feature-body h3 { font-size: 1.5rem; font-weight: 700; line-height: 1.3; margin-bottom: 16px; }
+    .feature-body p { color: var(--text-mid); line-height: 1.8; }
+
+    /* ===== 6. 料金プラン ===== */
+    #pricing { background: var(--bg-alt); }
+    .pricing-head { text-align: center; margin-bottom: 56px; }
+    .pricing-head h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; margin-bottom: 12px; }
+    .pricing-head p { color: var(--text-mid); }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
+    .plan-card { background: var(--card-bg); border-radius: var(--r); border: 1px solid var(--line); padding: 36px 32px; transition: box-shadow .3s; }
+    .plan-card:hover { box-shadow: var(--card-shadow-hover); }
+    .plan-card.featured { border: 2px solid var(--accent); box-shadow: var(--card-shadow-hover); transform: scale(1.04); }
+    .plan-label { font-size: .85rem; font-weight: 700; color: var(--text-mid); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 8px; }
+    .plan-badge { display: inline-block; background: var(--accent); color: #fff; font-size: .72rem; font-weight: 700; padding: 3px 10px; border-radius: 100px; margin-left: 8px; vertical-align: middle; }
+    .plan-price { margin: 16px 0; }
+    .plan-price strong { font-size: 2.4rem; font-weight: 800; color: var(--text); }
+    .plan-price span { font-size: .9rem; color: var(--text-light); }
+    .plan-init { font-size: .8rem; color: var(--accent); font-weight: 600; margin-bottom: 12px; }
+    .plan-desc { font-size: .9rem; color: var(--text-mid); line-height: 1.6; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+    .plan-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .plan-features li { display: flex; align-items: center; gap: 10px; font-size: .9rem; color: var(--text-mid); }
+    .plan-features li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      background: var(--accent-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' fill='none' stroke='%232563EB' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='3,9 7,13 15,5'/%3E%3C/svg%3E") center/contain no-repeat;
+      border-radius: 50%;
+    }
+    .plan-card .btn { width: 100%; }
+
+    /* ===== 7. ご利用の流れ ===== */
+    #flow { background: var(--bg); }
+    .flow-head { text-align: center; margin-bottom: 64px; }
+    .flow-head h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; margin-bottom: 12px; }
+    .flow-head p { color: var(--text-mid); max-width: 52ch; margin-inline: auto; }
+    .step-row { display: flex; align-items: flex-start; position: relative; }
+    .step-row::after {
+      content: '';
+      position: absolute;
+      top: 32px;
+      left: 12.5%;
+      right: 12.5%;
+      height: 1px;
+      background: var(--line);
+      z-index: 0;
+    }
+    .step-item { flex: 1; text-align: center; padding: 0 16px; position: relative; z-index: 1; }
+    .step-num {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--bg-accent);
+      color: var(--accent);
+      font-size: 1.2rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      border: 2px solid var(--accent-soft);
+    }
+    .step-title { font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+    .step-desc { font-size: .875rem; color: var(--text-mid); line-height: 1.7; }
+
+    /* ===== 8. FAQ ===== */
+    #faq { background: var(--bg-alt); }
+    .faq-inner { display: grid; grid-template-columns: 7fr 3fr; gap: 64px; align-items: start; }
+    .faq-section h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; margin-bottom: 40px; }
+    .accordion { display: flex; flex-direction: column; }
+    .accordion-item { border-bottom: 1px solid var(--line); }
+    .accordion-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 0;
+      background: none;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      font-family: var(--font);
+    }
+    .accordion-icon {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .2s, color .2s;
+      line-height: 1;
+    }
+    .accordion-item.open .accordion-icon { background: var(--accent); color: #fff; }
+    .accordion-body { display: none; padding-bottom: 20px; }
+    .accordion-item.open .accordion-body { display: block; }
+    .accordion-body p { color: var(--text-mid); line-height: 1.8; }
+    .faq-cta-card { background: var(--card-bg); border-radius: var(--r); box-shadow: var(--card-shadow); padding: 32px; position: sticky; top: 100px; }
+    .faq-cta-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
+    .faq-cta-card p { font-size: .9rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 20px; }
+    .faq-cta-card .btn { width: 100%; margin-bottom: 12px; }
+    .no-sales { font-size: .75rem; color: var(--text-light); text-align: center; }
+
+    /* ===== 9. お問い合わせ ===== */
+    #contact { background: var(--bg); }
+    .contact-inner { display: grid; grid-template-columns: 2fr 3fr; gap: 80px; align-items: start; }
+    .contact-copy h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; margin-bottom: 20px; }
+    .contact-copy p { color: var(--text-mid); line-height: 1.8; margin-bottom: 32px; }
+    .contact-links { display: flex; flex-direction: column; gap: 12px; }
+    .contact-link { display: flex; align-items: center; gap: 10px; font-size: .9rem; color: var(--text-mid); }
+    .contact-link svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 1.5; flex-shrink: 0; stroke-linecap: round; stroke-linejoin: round; }
+    .line-btn { display: inline-flex; align-items: center; gap: 8px; background: #06C755; color: #fff; padding: 12px 20px; border-radius: var(--r-sm); font-size: .9rem; font-weight: 700; transition: opacity .2s; margin-top: 8px; width: fit-content; }
+    .line-btn:hover { opacity: .88; }
+    .contact-form { display: flex; flex-direction: column; gap: 20px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: .875rem; font-weight: 600; color: var(--text); }
+    .req { color: var(--accent); margin-left: 4px; font-size: .75rem; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--r-sm);
+      font-size: 1rem;
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--card-bg);
+      transition: border-color .2s, box-shadow .2s;
+      width: 100%;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    /* ===== 10. クロージング ===== */
+    #closing { padding-block: 80px; background: var(--bg-dark); text-align: center; }
+    #closing h2 { font-size: clamp(1.6rem, 4vw, 2.8rem); font-weight: 700; color: var(--text-on-dark); line-height: 1.35; margin-bottom: 20px; }
+    #closing p { color: var(--text-light); font-size: 1rem; line-height: 1.8; margin-bottom: 40px; }
+
+    /* ===== 11. FOOTER ===== */
+    footer { background: var(--bg-dark); padding: 40px 0; border-top: 1px solid rgba(255,255,255,.06); }
+    .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+    .footer-brand .logo { color: var(--text-on-dark); display: block; margin-bottom: 10px; }
+    .footer-brand p { font-size: .875rem; color: var(--text-light); line-height: 1.6; }
+    .footer-nav h4, .footer-social h4 { font-size: .8rem; font-weight: 700; color: var(--text-light); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-nav ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-nav a { font-size: .875rem; color: var(--text-light); transition: color .2s; }
+    .footer-nav a:hover { color: var(--text-on-dark); }
+    .social-links { display: flex; gap: 12px; }
+    .social-link { width: 40px; height: 40px; border-radius: 8px; border: 1px solid rgba(255,255,255,.12); display: flex; align-items: center; justify-content: center; color: var(--text-light); transition: border-color .2s, color .2s; }
+    .social-link:hover { border-color: rgba(255,255,255,.3); color: var(--text-on-dark); }
+    .social-link svg { width: 18px; height: 18px; fill: currentColor; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.06); font-size: .8rem; color: var(--text-light); flex-wrap: wrap; gap: 12px; }
+    .footer-bottom a { color: var(--text-light); transition: color .2s; }
+    .footer-bottom a:hover { color: var(--text-on-dark); }
+
+    /* ===== MOBILE STICKY CTA ===== */
+    .mobile-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; padding: 12px 16px; background: var(--bg); border-top: 1px solid var(--line); }
+    .mobile-cta .btn { width: 100%; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .feature-visual { flex: 0 0 280px; }
+      .feature { gap: 48px; }
     }
 
-    @media (max-width: 1100px) {
-      .problem-grid,
-      .flow-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .solution-grid,
-      .about-inner,
-      .contact-grid,
-      .footer-grid,
-      .work-panel,
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-copy {
-        min-height: auto;
-        padding-right: 0;
-      }
-
-      .hero-note {
-        max-width: 760px;
-      }
-
-      .plan-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .plan-card.popular {
-        transform: none;
-      }
-    }
-
-    @media (max-width: 820px) {
-      :root {
-        --section-space: 72px;
-        --header-h: 76px;
-      }
-
-      body {
-        padding-bottom: 72px;
-      }
-
-      .header-inner {
-        grid-template-columns: 1fr auto auto;
-        gap: 14px;
-      }
-
-      .site-nav {
-        position: fixed;
-        inset: var(--header-h) 16px auto;
-        padding: 18px;
-        border-radius: 22px;
-        background: rgba(var(--bg-rgb), 0.96);
-        border: 1px solid rgba(var(--text-rgb), 0.08);
-        box-shadow: 0 20px 50px rgba(var(--text-rgb), 0.12);
-        opacity: 0;
-        pointer-events: none;
-        transform: translateY(-12px);
-        transition: transform var(--ease), opacity var(--ease);
-      }
-
-      .site-nav.is-open {
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateY(0);
-      }
-
-      .site-nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-      }
-
-      .nav-toggle {
-        display: inline-flex;
-      }
-
-      .header-cta {
-        display: none;
-      }
-
-      .problem-grid,
-      .plan-grid,
-      .flow-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .plans-note,
-      .pre-footer-inner,
-      .footer-bottom,
-      .hero-actions,
-      .contact-actions {
-        align-items: stretch;
-      }
-
-      .pre-footer-inner,
-      .plans-note {
-        flex-direction: column;
-      }
-
-      .mobile-sticky {
-        display: block;
-      }
+    @media (max-width: 768px) {
+      :root { --section-py: 72px; }
+      body { padding-bottom: 64px; }
+      nav, .header-cta { display: none; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .pain-inner { grid-template-columns: 1fr; gap: 40px; }
+      .showcase-grid { grid-template-columns: 1fr; }
+      .feature { flex-direction: column !important; gap: 32px; }
+      .feature-visual { flex: none; width: 100%; height: 180px; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin-inline: auto; }
+      .plan-card.featured { transform: none; }
+      .step-row { flex-direction: column; gap: 32px; }
+      .step-row::after { display: none; }
+      .faq-inner { grid-template-columns: 1fr; }
+      .faq-cta-card { position: static; order: -1; }
+      .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .mobile-cta { display: block; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        animation: none !important;
-        transition: none !important;
-      }
-
-      .fade-in,
-      .fade-in.is-visible {
-        opacity: 1 !important;
-        transform: none !important;
-      }
+      .fade-in { opacity: 1; transform: none; transition: none; }
     }
   </style>
-  <noscript>
-    <style>
-      .fade-in {
-        opacity: 1 !important;
-        transform: none !important;
-      }
-
-      .marquee-track {
-        animation-play-state: paused !important;
-      }
-
-      .site-nav {
-        position: static !important;
-        opacity: 1 !important;
-        pointer-events: auto !important;
-        transform: none !important;
-        background: transparent !important;
-        border: 0 !important;
-        box-shadow: none !important;
-      }
-
-      .nav-toggle,
-      .works-tabs {
-        display: none !important;
-      }
-
-      .work-panel {
-        display: grid !important;
-      }
-    </style>
-  </noscript>
 </head>
 <body>
-  <a class="skip-link" href="#main">本文へ移動</a>
-  <header class="site-header" id="top">
-    <div class="header-inner">
-      <a class="brand" href="#top" aria-label="SateOn トップへ戻る">
-        <img src="assets/novatech-logo.png" alt="SateOn by NovaTech" width="124" height="44" loading="lazy">
-        <span class="brand-copy">
-          <strong>SateOn</strong>
-          <span>サイトオン / NovaTech運営</span>
-        </span>
-      </a>
-      <nav class="site-nav" id="site-nav" aria-label="主要ナビゲーション">
-        <ul>
-          <li><a href="#problem">課題</a></li>
-          <li><a href="#solution">解決策</a></li>
-          <li><a href="#service">サービス</a></li>
-          <li><a href="#works">実績</a></li>
-          <li><a href="#flow">ご利用の流れ</a></li>
-          <li><a href="#about">運営について</a></li>
-          <li><a href="#faq">よくある質問</a></li>
-          <li><a href="#contact">お問い合わせ</a></li>
-        </ul>
-      </nav>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="メニューを開く">
-        <span></span>
-      </button>
-      <a class="btn btn-primary header-cta" href="#contact">無料で相談する</a>
+
+  <!-- HEADER -->
+  <header id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="logo">Nova<span>Tech</span></a>
+        <nav>
+          <a href="#showcase">デモサイト</a>
+          <a href="#reasons">選ばれる理由</a>
+          <a href="#pricing">料金</a>
+          <a href="#faq">よくある質問</a>
+          <a href="#contact">お問い合わせ</a>
+        </nav>
+        <a href="#contact" class="btn btn-primary header-cta">無料相談</a>
+      </div>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero">
-      <div class="hero-grid">
+  <!-- 1. HERO -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
         <div class="hero-copy fade-in">
-          <img class="hero-logo" src="assets/novatech-logo.png" alt="SateOn by NovaTech" width="360" height="128" loading="lazy">
-          <h1 class="serif">あなたのサロンに、プロ品質のホームページを。</h1>
-          <p>初期費用0円・月額9,800円から。最短即日で公開。</p>
+          <div class="hero-label">初期費用0円・月額9,800円〜</div>
+          <h1>あなたのサロンの魅力を、<br>ホームページで届ける。</h1>
+          <p>低コストでも、見た目と機能は妥協しない。<br>サロン・飲食店・士業に特化した、<br>プロ品質のホームページ制作サービスです。</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">まずは無料で相談する</a>
-            <a class="btn btn-secondary" href="#service">料金プランを見る</a>
+            <a href="#contact" class="btn btn-primary btn-lg">まずは無料で相談してみる</a>
+          </div>
+          <div class="hero-assurance">
+            <span>✓ 初期費用0円</span>
+            <span>✓ 最短1週間で公開</span>
+            <span>✓ 解約費用0円</span>
           </div>
         </div>
-        <aside class="hero-note fade-in" aria-label="SateOnの特長">
-          <strong>Quick Launch</strong>
-          <h2 class="serif">低コストでも、見た目と導線は妥協しない。</h2>
-          <ul>
-            <li>サロン・飲食店・建築・企業に合う構成で、最初から整った印象を作ります。</li>
-            <li>更新はLINEで一言。写真差し替えもお知らせ追加も、日々の運用まで軽くします。</li>
-            <li>ヒアリングから公開までが速いので、機会損失を最小限に抑えられます。</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>SALON ・ RESTAURANT ・ ARCHITECT ・ CORPORATE ・</span>
-        <span>SALON ・ RESTAURANT ・ ARCHITECT ・ CORPORATE ・</span>
-        <span>SALON ・ RESTAURANT ・ ARCHITECT ・ CORPORATE ・</span>
-        <span>SALON ・ RESTAURANT ・ ARCHITECT ・ CORPORATE ・</span>
-      </div>
-    </div>
-
-    <section class="section section-alt" id="problem">
-      <div class="wrap">
-        <div class="section-heading fade-in">
-          <span class="eyebrow">01 / Problems</span>
-          <h2 class="serif">こんなお悩みありませんか？</h2>
-          <p>ホームページがない状態も、古い状態のまま放置している状態も、予約導線や信頼感で損をしやすくなります。</p>
-        </div>
-        <div class="problem-grid">
-          <article class="card problem-card fade-in">
-            <div class="problem-icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                <path d="M4 5h16v12H4V5Zm3 15h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+        <div class="hero-visual fade-in">
+          <div class="mockup-browser">
+            <div class="mockup-bar">
+              <div class="mockup-dots"><span></span><span></span><span></span></div>
+              <div class="mockup-url">selqune.example.jp</div>
             </div>
-            <h3>ホームページを持っていない</h3>
-            <p>SNSやポータルだけでは、店舗や会社の信頼を十分に伝えにくいと感じる。</p>
-          </article>
-          <article class="card problem-card fade-in">
-            <div class="problem-icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                <path d="M6 8h12m-9 4h6m-7 8 8-16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>作りたいけど費用が高い</h3>
-            <p>初期費用が大きい見積もりだと、必要性は感じても着手できない。</p>
-          </article>
-          <article class="card problem-card fade-in">
-            <div class="problem-icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                <rect x="7" y="3.5" width="10" height="17" rx="2.2" stroke="currentColor" stroke-width="1.6"/>
-                <path d="M10 6.5h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>今のHPが古く、スマホ対応していない</h3>
-            <p>見た目が時代遅れで、スマホで見た時に読みにくく、離脱されやすい。</p>
-          </article>
-          <article class="card problem-card fade-in">
-            <div class="problem-icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                <path d="M7 7h10v10H7V7Zm-3 5h3m10 0h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3>更新のたびに業者に依頼が面倒</h3>
-            <p>メニュー変更やお知らせ追加のたびに、連絡や見積もりが発生して負担になる。</p>
-          </article>
-          <article class="card problem-card fade-in">
-            <div class="problem-icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                <path d="M5 15.5 9.5 11 13 14.5 19 8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M16 8.5h3v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3>集客につながらない</h3>
-            <p>ただあるだけのサイトでは、問い合わせや予約につながる導線が弱い。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="solution">
-      <div class="wrap">
-        <div class="section-heading fade-in">
-          <span class="eyebrow">02 / Solution</span>
-          <h2 class="serif">SateOnが解決します</h2>
-          <p>速さ、価格、見た目、運用のしやすさをまとめて整える、NovaTechのWebサイト制作サービスです。</p>
-        </div>
-        <div class="solution-grid">
-          <div class="solution-lead fade-in">
-            <p>SateOnは、NovaTechが運営するWebサイト制作サービスです。最新の技術と洗練されたデザインテンプレートで、サロン・飲食店・企業のホームページを高品質・低コスト・最短即日で制作します。見た目だけでなく、問い合わせや予約へ自然につながる構成まで含めて整えます。</p>
+            <img src="https://placehold.co/640x400/F1F5F9/475569?text=Selqune" alt="Selquneデモサイトプレビュー" class="mockup-screen" width="640" height="400" loading="eager" fetchpriority="high">
           </div>
-          <div class="solution-points">
-            <article class="card solution-card fade-in">
-              <strong>01</strong>
-              <h3>初期費用0円</h3>
-              <p>まとまった初期投資なしで、月額だけで始められます。まず公開して、必要に応じて育てる形に向いています。</p>
-            </article>
-            <article class="card solution-card fade-in">
-              <strong>02</strong>
-              <h3>プロ品質のデザイン</h3>
-              <p>業態特化テンプレートを土台にするので、スピードと見栄えを両立できます。安さだけが先に立つ印象にしません。</p>
-            </article>
-            <article class="card solution-card fade-in">
-              <strong>03</strong>
-              <h3>更新はLINEで一言</h3>
-              <p>テキスト修正、写真差し替え、お知らせ追加まで、LINEで送るだけで依頼できます。日常運用を重くしません。</p>
-            </article>
-            <article class="card solution-card fade-in">
-              <strong>04</strong>
-              <h3>最短即日公開</h3>
-              <p>お問い合わせ内容と素材が揃えば、当日中の公開にも対応します。今必要な情報をすぐに届けられます。</p>
-            </article>
+          <div class="mockup-phone">
+            <div class="mockup-phone-notch">スマホ対応</div>
+            <img src="https://placehold.co/180x320/F1F5F9/475569?text=SP" alt="" width="180" height="320" loading="eager" aria-hidden="true">
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="section section-alt" id="service">
-      <div class="wrap">
-        <div class="section-heading fade-in">
-          <span class="eyebrow">03 / Service</span>
-          <h2 class="serif">料金プラン</h2>
-          <p>SateOnは月額制で始めやすく、必要な更新回数やデザイン要件に応じて選べます。</p>
-        </div>
-        <div class="plan-grid">
-          <article class="card plan-card popular fade-in">
-            <span class="plan-badge">人気</span>
-            <div class="plan-head">
-              <h3>スタンダード</h3>
-              <p>最初の1ページをすばやく整えたい方向け</p>
-            </div>
-            <div class="plan-price">
-              <span>9,800円</span>
-              <small>月額 / 税別</small>
-            </div>
-            <ul class="plan-list">
-              <li><strong>ページ数</strong><span>1ページ</span></li>
-              <li><strong>デザイン</strong><span>セミオリジナル</span></li>
-              <li><strong>月間修正</strong><span>3回</span></li>
-              <li><strong>SEO</strong><span>基本</span></li>
-            </ul>
-            <div class="plan-footer">
-              <a class="btn btn-primary" href="#contact">このプランで相談</a>
-            </div>
-          </article>
-          <article class="card plan-card fade-in">
-            <div class="plan-head">
-              <h3>プロ</h3>
-              <p>複数ページとブログまでまとめて整えたい方向け</p>
-            </div>
-            <div class="plan-price">
-              <span>15,000円</span>
-              <small>月額 / 税別</small>
-            </div>
-            <ul class="plan-list">
-              <li><strong>ページ数</strong><span>5ページ+ブログ</span></li>
-              <li><strong>デザイン</strong><span>セミオリジナル+カスタム</span></li>
-              <li><strong>月間修正</strong><span>5回</span></li>
-              <li><strong>SEO</strong><span>基本</span></li>
-            </ul>
-            <div class="plan-footer">
-              <a class="btn btn-ghost" href="#contact">このプランで相談</a>
-            </div>
-          </article>
-          <article class="card plan-card fade-in">
-            <div class="plan-head">
-              <h3>プレミアム</h3>
-              <p>ブランドの世界観から細かく作り込みたい方向け</p>
-            </div>
-            <div class="plan-price">
-              <span>25,000円</span>
-              <small>月額 / 税別</small>
-            </div>
-            <ul class="plan-list">
-              <li><strong>ページ数</strong><span>5ページ+ブログ</span></li>
-              <li><strong>デザイン</strong><span>Figmaフルオリジナル</span></li>
-              <li><strong>月間修正</strong><span>10回</span></li>
-              <li><strong>SEO</strong><span>詳細(GBP+GA4+月次レポート)</span></li>
-            </ul>
-            <div class="plan-footer">
-              <a class="btn btn-ghost" href="#contact">このプランで相談</a>
-            </div>
-          </article>
-        </div>
-        <div class="plans-note fade-in">
-          <div>
-            <p><strong>NovaTech受託（買い切り）</strong> 5〜20万円。要件やページ構成に応じて個別見積もりします。</p>
-            <p>詳しくはお問い合わせください。月額制より自由度の高い制作にも対応します。</p>
-          </div>
-          <a class="btn btn-primary" href="#contact">まとめて相談する</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="works">
-      <div class="wrap">
-        <div class="section-heading fade-in">
-          <span class="eyebrow">04 / Works</span>
-          <h2 class="serif">こんなサイトが作れます</h2>
-          <p>制作実績ではなく制作イメージです。業種ごとの雰囲気に合わせて、見せ方と導線を整えます。</p>
-        </div>
-        <div class="works-lead fade-in">
-          <p class="works-note">月額9,800円〜でこのクオリティ。</p>
-          <p class="works-subnote">制作イメージです。実案件が出たら制作実績に変更予定。</p>
-        </div>
-        <div class="works-shell fade-in">
-          <div class="works-tabs" role="tablist" aria-label="制作イメージの切り替え">
-            <button class="work-tab" type="button" role="tab" id="tab-salon" aria-selected="true" aria-controls="panel-salon" tabindex="0" data-panel="salon">サロン</button>
-            <button class="work-tab" type="button" role="tab" id="tab-restaurant" aria-selected="false" aria-controls="panel-restaurant" tabindex="-1" data-panel="restaurant">飲食</button>
-            <button class="work-tab" type="button" role="tab" id="tab-architect" aria-selected="false" aria-controls="panel-architect" tabindex="-1" data-panel="architect">建築</button>
-            <button class="work-tab" type="button" role="tab" id="tab-corporate" aria-selected="false" aria-controls="panel-corporate" tabindex="-1" data-panel="corporate">企業</button>
-          </div>
-          <div class="work-panels" id="works-panels">
-            <article class="work-panel" id="panel-salon" role="tabpanel" aria-labelledby="tab-salon">
-              <div class="work-visual">
-                <div class="browser-mockup">
-                  <div class="browser-bar" aria-hidden="true">
-                    <div class="browser-dots">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <div class="browser-address">selqune-demo.jp</div>
-                  </div>
-                  <div class="browser-screen">
-                    <img src="https://placehold.co/1200x750/F7F5F2/1A1918?text=Selqune+Demo" alt="Selquneのブラウザモックアップ" width="1200" height="750" loading="lazy">
-                  </div>
-                </div>
-              </div>
-              <div class="work-copy">
-                <strong>Selqune / 美容室</strong>
-                <h3 class="serif">上質さと予約導線を両立した、サロン向けの見せ方。</h3>
-                <p>価格帯を感じさせる余白設計と、予約ボタンまでの流れを整理した構成です。</p>
-                <ul>
-                  <li>メニュー、スタッフ、アクセスをスマホで見やすく配置</li>
-                  <li>初来店前に不安を減らすFAQとスタイル写真の見せ方</li>
-                  <li>店舗の雰囲気を損なわない、静かなトーンのデザイン</li>
-                </ul>
-                <a class="btn btn-ghost" href="https://y1-310.github.io/novatech-siteon-client-bloom/" target="_blank" rel="noopener">デモを見る</a>
-              </div>
-            </article>
-            <article class="work-panel" id="panel-restaurant" role="tabpanel" aria-labelledby="tab-restaurant">
-              <div class="work-visual">
-                <div class="browser-mockup">
-                  <div class="browser-bar" aria-hidden="true">
-                    <div class="browser-dots">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <div class="browser-address">fraviel-table-demo.jp</div>
-                  </div>
-                  <div class="browser-screen">
-                    <img src="https://placehold.co/1200x750/1A1210/F0E8D8?text=Fraviel+Table+Demo" alt="Fraviel Tableのブラウザモックアップ" width="1200" height="750" loading="lazy">
-                  </div>
-                </div>
-              </div>
-              <div class="work-copy">
-                <strong>Fraviel Table / ビストロ</strong>
-                <h3 class="serif">料理写真と空気感を活かしつつ、来店動機を作る構成。</h3>
-                <p>メニュー、シェフのこだわり、予約導線を一連で見せる飲食店向けの設計です。</p>
-                <ul>
-                  <li>ランチ、ディナー、コース情報の整理された導線</li>
-                  <li>店舗写真とコピーのバランスで世界観を強化</li>
-                  <li>予約前に知りたい営業時間やアクセス情報を明快に配置</li>
-                </ul>
-                <a class="btn btn-ghost" href="https://y1-310.github.io/novatech-siteon-client-test-tomori/" target="_blank" rel="noopener">デモを見る</a>
-              </div>
-            </article>
-            <article class="work-panel" id="panel-architect" role="tabpanel" aria-labelledby="tab-architect">
-              <div class="work-visual">
-                <div class="browser-mockup">
-                  <div class="browser-bar" aria-hidden="true">
-                    <div class="browser-dots">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <div class="browser-address">atelique-mora-demo.jp</div>
-                  </div>
-                  <div class="browser-screen">
-                    <img src="https://placehold.co/1200x750/F5F3EF/2A2520?text=Atelique+Mora+Demo" alt="Atelique Moraのブラウザモックアップ" width="1200" height="750" loading="lazy">
-                  </div>
-                </div>
-              </div>
-              <div class="work-copy">
-                <strong>Atelique Mora / 建築設計事務所</strong>
-                <h3 class="serif">余白と写真で信頼感を伝える、設計事務所向けの見せ方。</h3>
-                <p>事例紹介の見やすさと、相談前に伝えるべき思想や対応範囲を整理しています。</p>
-                <ul>
-                  <li>プロジェクト事例を静かなトーンで並べる構成</li>
-                  <li>相談の流れや対象エリアを明確に提示</li>
-                  <li>法人・個人どちらの依頼にも対応しやすい情報設計</li>
-                </ul>
-                <a class="btn btn-ghost" href="https://y1-310.github.io/novatech-siteon-client-test-mori/" target="_blank" rel="noopener">デモを見る</a>
-              </div>
-            </article>
-            <article class="work-panel" id="panel-corporate" role="tabpanel" aria-labelledby="tab-corporate">
-              <div class="work-visual">
-                <div class="browser-mockup">
-                  <div class="browser-bar" aria-hidden="true">
-                    <div class="browser-dots">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <div class="browser-address">seion-ledger-demo.jp</div>
-                  </div>
-                  <div class="browser-screen">
-                    <img src="https://placehold.co/1200x750/F5F5F3/18181A?text=Seion+Ledger+Demo" alt="Seion Ledgerのブラウザモックアップ" width="1200" height="750" loading="lazy">
-                  </div>
-                </div>
-              </div>
-              <div class="work-copy">
-                <strong>Seion Ledger / 税理士事務所</strong>
-                <h3 class="serif">堅実さと親しみやすさを両立した、企業向けの基礎設計。</h3>
-                <p>サービス範囲、料金感、問い合わせまでの導線を整理し、安心して相談しやすい構成にしています。</p>
-                <ul>
-                  <li>サービス紹介と比較検討しやすい料金導線</li>
-                  <li>代表紹介や対応領域を通じた信頼醸成</li>
-                  <li>問い合わせ前の不安を減らす導線と文言設計</li>
-                </ul>
-                <a class="btn btn-ghost" href="https://y1-310.github.io/novatech-siteon-client-test-akari/" target="_blank" rel="noopener">デモを見る</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="flow">
-      <div class="wrap">
-        <div class="section-heading fade-in">
-          <span class="eyebrow">05 / Flow</span>
-          <h2 class="serif">ご利用の流れ</h2>
-          <p>お問い合わせから公開後の運用まで、必要な動きをシンプルに保ちます。</p>
-        </div>
-        <div class="flow-grid">
-          <article class="card flow-card fade-in">
-            <span class="flow-number">Step 1</span>
-            <h3>お問い合わせ</h3>
-            <p>フォームまたはLINEで気軽にご連絡ください。現状のお悩みや作りたいイメージを伺います。</p>
-          </article>
-          <article class="card flow-card fade-in">
-            <span class="flow-number">Step 2</span>
-            <h3>ヒアリング</h3>
-            <p>サロンの特徴・ご要望をお伺いします。オンラインでの打ち合わせにも対応します。</p>
-          </article>
-          <article class="card flow-card fade-in">
-            <span class="flow-number">Step 3</span>
-            <h3>サイト制作</h3>
-            <p>最短即日でデザイン・コーディングを進めます。必要素材が足りない場合は仮素材でも公開準備を進めます。</p>
-          </article>
-          <article class="card flow-card fade-in">
-            <span class="flow-number">Step 4</span>
-            <h3>公開・運用開始</h3>
-            <p>公開後もLINEで更新依頼OKです。運用しながら内容を整えていけます。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="about">
-      <div class="wrap">
-        <div class="section-heading fade-in">
-          <span class="eyebrow">06 / About</span>
-          <h2 class="serif">つくっている人</h2>
-          <p>誰が、どんな思いでSateOnをやっているのかを簡単にお伝えします。</p>
-        </div>
-        <div class="about-inner">
-          <div class="about-photo fade-in">
-            <img src="https://placehold.co/400x500/F5EFE6/5C5040?text=Yuichi+Sato" alt="SateOn代表 佐藤雄一" width="400" height="500" loading="lazy">
-          </div>
-          <div class="about-copy fade-in">
-            <h3 class="serif">佐藤雄一</h3>
-            <p class="about-role">NovaTech / SateOn代表</p>
-            <p>以前から、良いサービスやお店なのにWebが追いついておらず、魅力が十分に伝わっていない場面を何度も見てきました。SateOnは、そうした方に「高すぎる制作費」や「よく分からない運用負担」で止まってほしくなくて始めたサービスです。特にサロンのように、空気感や人柄が選ばれる仕事に届けたいと思っています。ひとりで対応しているからこそ、話を聞くところから公開後の小さな更新まで、温度差なく丁寧に伴走できます。</p>
-            <ul class="about-tags" aria-label="対応領域">
-              <li>Web制作</li>
-              <li>サロン特化</li>
-              <li>神奈川・藤沢</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="faq">
-      <div class="wrap">
-        <div class="section-heading fade-in">
-          <span class="eyebrow">07 / FAQ</span>
-          <h2 class="serif">よくあるご質問</h2>
-          <p class="faq-intro">最初に確認されることが多い点をまとめました。契約期間、写真素材、解約後の扱いまで事前に把握できます。</p>
-        </div>
-        <div class="faq-grid">
-          <details class="faq-item fade-in" open>
-            <summary>最低契約期間は？</summary>
-            <div class="faq-body">12ヶ月からです。短期間だけ公開して終わるのではなく、運用しながら整えていく前提でご案内しています。</div>
-          </details>
-          <details class="faq-item fade-in" open>
-            <summary>写真がない場合はどうなりますか？</summary>
-            <div class="faq-body">フリー素材で仮公開し、後からお客様の写真に差し替えられます。まず公開を優先したい場合にも対応可能です。</div>
-          </details>
-          <details class="faq-item fade-in" open>
-            <summary>修正回数を超えたら？</summary>
-            <div class="faq-body">超過分は1回1,000円（税別）です。小さな更新でも依頼しやすい価格感にしています。</div>
-          </details>
-          <details class="faq-item fade-in" open>
-            <summary>解約後はどうなりますか？</summary>
-            <div class="faq-body">サイトは翌月末に削除となります。HTMLの買取をご希望の場合は5万円で対応できます。</div>
-          </details>
-          <details class="faq-item fade-in" open>
-            <summary>ドメインは自分で用意する必要がありますか？</summary>
-            <div class="faq-body">ドメイン取得・設定込みで対応します。技術的な手続きはお任せください。</div>
-          </details>
-          <details class="faq-item fade-in" open>
-            <summary>他業種にも対応していますか？</summary>
-            <div class="faq-body">サロン以外にも、飲食、建築、企業LPなど幅広く対応しています。まずはご相談ください。</div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="wrap">
-        <div class="section-heading fade-in">
-          <span class="eyebrow">08 / Contact</span>
-          <h2 class="serif">お問い合わせ</h2>
-          <p>検討段階でも問題ありません。今の課題や、作りたい雰囲気が曖昧な状態でもご相談いただけます。</p>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-copy fade-in">
-            <p>SateOnは、NovaTech代表の佐藤雄一が運営しています。初回相談では、必要なページ数、公開希望時期、今ある素材の状況を整理しながら、無理のない始め方をご提案します。</p>
-            <ul class="contact-points">
-              <li>お問い合わせメール: <a class="privacy-link" href="mailto:novatech.siteon@gmail.com">novatech.siteon@gmail.com</a></li>
-              <li>運営: NovaTech（個人事業）</li>
-              <li>対象エリア: 日本全国 / オンライン対応可</li>
-            </ul>
-          </div>
-          <form class="contact-form fade-in" action="https://formspree.io/f/xkopezbq" method="POST">
-            <p class="form-note">*は必須項目です</p>
-            <input type="hidden" name="_replyto" value="novatech.siteon@gmail.com">
-            <div class="field">
-              <label for="name">お名前 *</label>
-              <input id="name" name="name" type="text" required autocomplete="name">
-            </div>
-            <div class="field">
-              <label for="email">メール *</label>
-              <input id="email" name="email" type="email" required autocomplete="email">
-            </div>
-            <div class="field">
-              <label for="tel">電話</label>
-              <input id="tel" name="tel" type="tel" autocomplete="tel">
-            </div>
-            <div class="field">
-              <label for="plan">ご興味のあるプラン</label>
-              <select id="plan" name="plan">
-                <option>スタンダード</option>
-                <option>プロ</option>
-                <option>プレミアム</option>
-                <option>受託</option>
-                <option>まだ決めていない</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="message">ご相談内容 *</label>
-              <textarea id="message" name="message" required></textarea>
-            </div>
-            <div class="contact-actions">
-              <button class="btn btn-primary" type="submit">無料で相談する</button>
-              <a class="btn btn-line" href="https://lin.ee/oRKHrcK">LINEで相談する</a>
-            </div>
-            <a class="privacy-link" href="privacy.html">プライバシーポリシー</a>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <section class="pre-footer">
-    <div class="pre-footer-inner">
-      <div class="pre-footer-copy fade-in">
-        <h2 class="serif">必要なのは、立派なサイトではなく、信頼される入口です。</h2>
-        <p>まずは現状を聞かせてください。最小コストで、今必要な形に整えます。</p>
-      </div>
-      <a class="btn btn-primary fade-in" href="#contact">無料で相談する</a>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="assets/novatech-logo.png" alt="SateOn by NovaTech" width="118" height="42" loading="lazy">
-          <p class="footer-title">SateOn</p>
-          <p class="footer-meta">NovaTech / 個人事業</p>
-          <p class="footer-meta">東京都</p>
+  <!-- 2. SOCIAL PROOF BAR -->
+  <section id="social-proof">
+    <div class="container">
+      <div class="proof-grid">
+        <div class="proof-item fade-in">
+          <span class="proof-num">7</span>
+          <span class="proof-label">業種対応</span>
         </div>
-        <div class="footer-links">
-          <strong>Site Map</strong>
-          <nav aria-label="フッターナビゲーション">
-            <a href="#problem">課題</a>
-            <a href="#solution">解決策</a>
-            <a href="#service">サービス</a>
-            <a href="#works">実績</a>
-            <a href="#flow">ご利用の流れ</a>
-            <a href="#about">運営について</a>
-            <a href="#faq">よくある質問</a>
-            <a href="#contact">お問い合わせ</a>
-          </nav>
+        <div class="proof-item fade-in">
+          <span class="proof-num">全100</span>
+          <span class="proof-label">点 Lighthouse</span>
+        </div>
+        <div class="proof-item fade-in">
+          <span class="proof-num">1週間</span>
+          <span class="proof-label">最短公開</span>
+        </div>
+        <div class="proof-item fade-in">
+          <span class="proof-num">¥0</span>
+          <span class="proof-label">初期費用</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. お悩み -->
+  <section id="pain">
+    <div class="container">
+      <div class="pain-inner">
+        <div class="pain-copy fade-in">
+          <h2>作りたいのに、<br>踏み出せない理由。</h2>
+          <p>ホームページが必要なのは分かっている。<br>でも、費用・時間・技術のハードルが高い。</p>
+        </div>
+        <div class="checklist">
+          <div class="check-item fade-in">
+            <div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <p>「制作会社に頼むと30万円以上と言われた」</p>
+          </div>
+          <div class="check-item fade-in">
+            <div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <p>「自分で作る時間も技術もない」</p>
+          </div>
+          <div class="check-item fade-in">
+            <div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <p>「HPBやSNSだけでは限界を感じている」</p>
+          </div>
+          <div class="check-item fade-in">
+            <div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <p>「テンプレートでは他店と差別化できない」</p>
+          </div>
+          <div class="check-item fade-in">
+            <div class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+            <p>「作った後の更新が面倒で放置している」</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SHOWCASE -->
+  <section id="showcase">
+    <div class="container">
+      <div class="showcase-head fade-in">
+        <h2>この品質が、月額9,800円から。</h2>
+        <p>美容室・飲食店・士業・建築。あらゆる業種に対応しています。</p>
+      </div>
+      <div class="showcase-grid">
+        <div class="demo-card fade-in">
+          <img src="https://placehold.co/640x400/F1F5F9/475569?text=Selqune" alt="美容室デモサイト Selqune" width="640" height="400" loading="lazy">
+          <div class="demo-card-body">
+            <div class="demo-genre">美容室</div>
+            <div class="demo-name">Selqune</div>
+            <div class="demo-desc">自然光が似合う、大人のヘアサロン。</div>
+          </div>
+        </div>
+        <div class="demo-card fade-in">
+          <img src="https://placehold.co/640x400/F1F5F9/475569?text=FORGE" alt="バーバーデモサイト FORGE" width="640" height="400" loading="lazy">
+          <div class="demo-card-body">
+            <div class="demo-genre">バーバー</div>
+            <div class="demo-name">FORGE</div>
+            <div class="demo-desc">男の身だしなみを、ここで整える。</div>
+          </div>
+        </div>
+        <div class="demo-card fade-in">
+          <img src="https://placehold.co/640x400/F1F5F9/475569?text=Fraviel+Table" alt="ビストロデモサイト Fraviel Table" width="640" height="400" loading="lazy">
+          <div class="demo-card-body">
+            <div class="demo-genre">ビストロ</div>
+            <div class="demo-name">Fraviel Table</div>
+            <div class="demo-desc">薪火と旬を、ゆっくり味わう。</div>
+          </div>
+        </div>
+        <div class="demo-card fade-in">
+          <img src="https://placehold.co/640x400/F1F5F9/475569?text=Atelique+Mora" alt="建築事務所デモサイト Atelique Mora" width="640" height="400" loading="lazy">
+          <div class="demo-card-body">
+            <div class="demo-genre">建築事務所</div>
+            <div class="demo-name">Atelique Mora</div>
+            <div class="demo-desc">光と風を設計する、住まいの建築家。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 選ばれる理由 -->
+  <section id="reasons">
+    <div class="container">
+      <div class="reasons-head fade-in">
+        <h2>NovaTechが選ばれる理由</h2>
+      </div>
+      <div class="feature-list">
+        <div class="feature fade-in">
+          <div class="feature-visual">
+            <div class="feature-icon-wrap">
+              <svg viewBox="0 0 48 48"><polyline points="6,38 18,26 26,34 42,18"/><polyline points="30,18 42,18 42,30"/></svg>
+            </div>
+          </div>
+          <div class="feature-body">
+            <span class="feature-num">01</span>
+            <h3>手書きコード。テンプレート不使用。</h3>
+            <p>WordPressもテンプレートも使いません。<br>1行ずつ手書きしたHTMLだから、<br>表示速度もSEOも最高水準。<br>Lighthouse全項目90点以上を保証します。</p>
+          </div>
+        </div>
+        <div class="feature fade-in">
+          <div class="feature-visual">
+            <div class="feature-icon-wrap">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><polyline points="24,14 24,24 30,30"/></svg>
+            </div>
+          </div>
+          <div class="feature-body">
+            <span class="feature-num">02</span>
+            <h3>作って終わりにしない。</h3>
+            <p>公開後も月額プランで更新・改善を継続。<br>テキスト修正、写真差し替え、季節メニュー更新。<br>LINEで一言送るだけで対応します。</p>
+          </div>
+        </div>
+        <div class="feature fade-in">
+          <div class="feature-visual">
+            <div class="feature-icon-wrap">
+              <svg viewBox="0 0 48 48"><rect x="6" y="8" width="36" height="28" rx="4"/><line x1="16" y1="42" x2="32" y2="42"/><line x1="24" y1="36" x2="24" y2="42"/><line x1="14" y1="22" x2="34" y2="22"/><line x1="14" y1="28" x2="28" y2="28"/></svg>
+            </div>
+          </div>
+          <div class="feature-body">
+            <span class="feature-num">03</span>
+            <h3>あなたの業種に合わせた設計。</h3>
+            <p>美容室には美容室の、飲食店には飲食店の、<br>最適なデザインパターンがあります。<br>7業種の研究から生まれた専用設計で、<br>お客様の心に届くサイトを作ります。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 料金プラン -->
+  <section id="pricing">
+    <div class="container">
+      <div class="pricing-head fade-in">
+        <h2>シンプルな料金体系</h2>
+        <p>初期費用0円。必要なのは月額料金だけ。</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="plan-card fade-in">
+          <div class="plan-label">Standard</div>
+          <div class="plan-price"><strong>¥9,800</strong><span>/月（税別）</span></div>
+          <div class="plan-init">初期費用 ¥0</div>
+          <div class="plan-desc">1ページ構成。セミオリジナルデザイン。<br>まずはホームページを持ちたい方に。</div>
+          <ul class="plan-features">
+            <li>スマホ対応</li>
+            <li>SEO基本対策</li>
+            <li>お問い合わせフォーム</li>
+            <li>月3回まで更新</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline">このプランで相談する</a>
+        </div>
+        <div class="plan-card featured fade-in">
+          <div class="plan-label">Professional <span class="plan-badge">人気</span></div>
+          <div class="plan-price"><strong>¥15,000</strong><span>/月（税別）</span></div>
+          <div class="plan-init">初期費用 ¥0</div>
+          <div class="plan-desc">5ページ＋ブログ。<br>本格的に集客したい方に。</div>
+          <ul class="plan-features">
+            <li>Standard全機能</li>
+            <li>5ページ構成</li>
+            <li>ブログ機能</li>
+            <li>月5回まで更新</li>
+            <li>SNS連携</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">このプランで相談する</a>
+        </div>
+        <div class="plan-card fade-in">
+          <div class="plan-label">Premium</div>
+          <div class="plan-price"><strong>¥25,000</strong><span>/月（税別）</span></div>
+          <div class="plan-init">初期費用 ¥0</div>
+          <div class="plan-desc">Figmaフルオリジナル。<br>ブランドを確立したい方に。</div>
+          <ul class="plan-features">
+            <li>Professional全機能</li>
+            <li>Figmaオリジナルデザイン</li>
+            <li>月10回まで更新</li>
+            <li>EC機能（10商品まで）</li>
+            <li>月次SEOレポート</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline">このプランで相談する</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. ご利用の流れ -->
+  <section id="flow">
+    <div class="container">
+      <div class="flow-head fade-in">
+        <h2>公開までの流れ</h2>
+        <p>最短1週間。お問い合わせから公開まで、すべてオンラインで完結します。</p>
+      </div>
+      <div class="step-row">
+        <div class="step-item fade-in">
+          <div class="step-num">01</div>
+          <div class="step-title">無料相談</div>
+          <div class="step-desc">LINEまたはフォームからお気軽に。<br>ご要望をヒアリングします。</div>
+        </div>
+        <div class="step-item fade-in">
+          <div class="step-num">02</div>
+          <div class="step-title">デザイン制作</div>
+          <div class="step-desc">業種に合わせたデザインを制作。<br>プレビューを見ながら調整します。</div>
+        </div>
+        <div class="step-item fade-in">
+          <div class="step-num">03</div>
+          <div class="step-title">確認・修正</div>
+          <div class="step-desc">完成イメージをご確認いただき、<br>納得いくまで修正します。</div>
+        </div>
+        <div class="step-item fade-in">
+          <div class="step-num">04</div>
+          <div class="step-title">公開・運用開始</div>
+          <div class="step-desc">独自ドメインで公開。<br>その後の更新もおまかせください。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="faq-inner">
+        <div class="faq-section">
+          <h2 class="fade-in">よくあるご質問</h2>
+          <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-trigger">本当に初期費用は0円ですか？<span class="accordion-icon">+</span></button>
+              <div class="accordion-body"><p>はい。制作費用は月額料金に含まれています。初期費用、解約費用ともに0円です。</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger">最低契約期間はありますか？<span class="accordion-icon">+</span></button>
+              <div class="accordion-body"><p>12ヶ月です。13ヶ月目以降はいつでも解約できます。</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger">自分で更新できますか？<span class="accordion-icon">+</span></button>
+              <div class="accordion-body"><p>更新はすべて私たちが対応します。LINEで内容を送るだけ。専門知識は不要です。</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger">どんな業種に対応していますか？<span class="accordion-icon">+</span></button>
+              <div class="accordion-body"><p>美容室、バーバー、ネイルサロン、エステ、飲食店、建築事務所、士業など幅広く対応しています。</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger">解約したらサイトはどうなりますか？<span class="accordion-icon">+</span></button>
+              <div class="accordion-body"><p>解約翌月末にサーバーから削除します。30日前にお知らせしますので、ドメイン移管やデータ買い取りも可能です。</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="faq-cta-card fade-in">
+          <h3>まだ不安な方も、お気軽に。</h3>
+          <p>些細なことでも構いません。まずはお話を聞かせてください。</p>
+          <a href="#contact" class="btn btn-primary">無料で相談してみる</a>
+          <p class="no-sales">※ 強引な営業は一切しません。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. お問い合わせ -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-copy fade-in">
+          <h2>お問い合わせ</h2>
+          <p>ホームページのこと、何でもご相談ください。<br>まだ具体的に決まっていなくても大丈夫です。</p>
+          <div class="contact-links">
+            <div class="contact-link">
+              <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,14 22,4"/></svg>
+              novatech.siteon@gmail.com
+            </div>
+            <a href="https://lin.ee/oRKHrcK" class="line-btn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M22 10.3c0-4.6-4.5-8.3-10-8.3S2 5.7 2 10.3c0 4.1 3.6 7.6 8.5 8.2.3.1.8.2.9.5s.1.6.1.9c-.1.3-.3 1.3-.3 1.3s-.1.5.4.3c.6-.2 3-1.8 4.2-3 .7-.8 1.1-1.6 1.1-1.6S22 14.5 22 10.3z"/></svg>
+              LINEで友だち追加
+            </a>
+          </div>
+        </div>
+        <form class="contact-form fade-in" action="https://formspree.io/f/xkopezbq" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">お名前<span class="req">必須</span></label>
+              <input type="text" id="name" name="name" required placeholder="山田 花子">
+            </div>
+            <div class="form-group">
+              <label for="email">メールアドレス<span class="req">必須</span></label>
+              <input type="email" id="email" name="email" required placeholder="example@email.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="tel">電話番号<span style="font-size:.75rem;color:var(--text-light);margin-left:4px;">任意</span></label>
+            <input type="tel" id="tel" name="tel" placeholder="090-0000-0000">
+          </div>
+          <div class="form-group">
+            <label for="industry">業種<span class="req">必須</span></label>
+            <select id="industry" name="industry" required>
+              <option value="" disabled selected>選択してください</option>
+              <option>美容室</option>
+              <option>バーバー</option>
+              <option>ネイル・エステ</option>
+              <option>飲食店</option>
+              <option>建築</option>
+              <option>士業</option>
+              <option>その他</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">ご相談内容</label>
+            <textarea id="message" name="message" placeholder="お気軽にご記入ください。"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">送信する</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. クロージング -->
+  <section id="closing">
+    <div class="container">
+      <h2 class="fade-in">必要なのは、立派なサイトではなく、<br>信頼される入口です。</h2>
+      <p class="fade-in">あなたのサロンのお客様が、<br>初めてホームページを見た瞬間を想像してみてください。</p>
+      <a href="#contact" class="btn btn-outline-white btn-lg fade-in">まずは無料で相談してみる</a>
+    </div>
+  </section>
+
+  <!-- 11. Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo">Nova<span>Tech</span></span>
+          <p>サロン・飲食店・士業に特化した、<br>プロ品質のホームページ制作サービス。</p>
+        </div>
+        <div class="footer-nav">
+          <h4>メニュー</h4>
+          <ul>
+            <li><a href="#showcase">デモサイト</a></li>
+            <li><a href="#reasons">選ばれる理由</a></li>
+            <li><a href="#pricing">料金プラン</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+          </ul>
         </div>
         <div class="footer-social">
-          <strong>Social</strong>
-          <nav aria-label="SNSリンク">
-            <a href="https://x.com/novatech_siteon/" target="_blank" rel="noopener">X</a>
-            <a href="https://www.instagram.com/novatech.siteon/" target="_blank" rel="noopener">Instagram</a>
-          </nav>
+          <h4>フォロー</h4>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <small>&copy; 2026 NovaTech. All rights reserved.</small>
-        <a href="privacy.html">プライバシーポリシー</a>
+        <span>© 2026 NovaTech. All rights reserved.</span>
+        <a href="/privacy.html">プライバシーポリシー</a>
       </div>
     </div>
   </footer>
 
-  <div class="mobile-sticky">
-    <a class="btn btn-primary" href="#contact">無料で相談する</a>
+  <!-- モバイル固定CTA -->
+  <div class="mobile-cta">
+    <a href="#contact" class="btn btn-primary">まずは無料で相談してみる</a>
   </div>
 
   <script>
-    document.documentElement.classList.add("js");
+    // Header scroll
+    const hdr = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      hdr.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
 
-    const header = document.querySelector(".site-header");
-    const toggle = document.querySelector(".nav-toggle");
-    const nav = document.querySelector(".site-nav");
-    const navLinks = nav ? nav.querySelectorAll("a") : [];
-    const faqItems = document.querySelectorAll(".faq-item");
-    const fadeItems = document.querySelectorAll(".fade-in");
-    const worksShell = document.querySelector(".works-shell");
-    const tabs = document.querySelectorAll(".work-tab");
-    const panels = document.querySelectorAll(".work-panel");
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    if (faqItems.length) {
-      faqItems.forEach((item) => item.removeAttribute("open"));
-    }
-
-    const syncHeader = () => {
-      if (!header) return;
-      if (window.scrollY > 18) {
-        header.classList.add("is-scrolled");
-      } else {
-        header.classList.remove("is-scrolled");
-      }
-    };
-
-    syncHeader();
-    window.addEventListener("scroll", syncHeader, { passive: true });
-
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        const expanded = toggle.getAttribute("aria-expanded") === "true";
-        toggle.setAttribute("aria-expanded", String(!expanded));
-        nav.classList.toggle("is-open", !expanded);
+    // Fade-in IntersectionObserver
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
       });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
 
-      navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          toggle.setAttribute("aria-expanded", "false");
-          nav.classList.remove("is-open");
+    // Accordion
+    document.querySelectorAll('.accordion-trigger').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.accordion-item');
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.accordion-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.accordion-icon').textContent = '+';
         });
+        if (!wasOpen) {
+          item.classList.add('open');
+          btn.querySelector('.accordion-icon').textContent = '−';
+        }
       });
-    }
-
-    if (!reduceMotion && "IntersectionObserver" in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.18, rootMargin: "0px 0px -8% 0px" });
-
-      fadeItems.forEach((item) => observer.observe(item));
-    } else {
-      fadeItems.forEach((item) => item.classList.add("is-visible"));
-    }
-
-    const activateTab = (targetId) => {
-      tabs.forEach((tab) => {
-        const isActive = tab.dataset.panel === targetId;
-        tab.setAttribute("aria-selected", String(isActive));
-        tab.tabIndex = isActive ? 0 : -1;
-      });
-
-      panels.forEach((panel) => {
-        const isActive = panel.id === `panel-${targetId}`;
-        panel.classList.toggle("is-active", isActive);
-        panel.hidden = !isActive;
-      });
-    };
-
-    if (tabs.length && panels.length && worksShell) {
-      worksShell.classList.add("tab-enhanced");
-      panels.forEach((panel) => panel.hidden = true);
-      activateTab("salon");
-
-      tabs.forEach((tab, index) => {
-        tab.addEventListener("click", () => activateTab(tab.dataset.panel));
-        tab.addEventListener("keydown", (event) => {
-          const currentIndex = index;
-          let nextIndex = currentIndex;
-          if (event.key === "ArrowRight") nextIndex = (currentIndex + 1) % tabs.length;
-          if (event.key === "ArrowLeft") nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
-          if (nextIndex !== currentIndex) {
-            event.preventDefault();
-            tabs[nextIndex].focus();
-            activateTab(tabs[nextIndex].dataset.panel);
-          }
-        });
-      });
-    }
+    });
   </script>
 </body>
 </html>
