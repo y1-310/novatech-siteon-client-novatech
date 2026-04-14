@@ -451,8 +451,8 @@
       position: relative;
       border-radius: var(--r);
       overflow: hidden;
-      flex: 1;                /* hero-visual の残り高さを全て占有 */
-      min-height: 400px;      /* モバイル等での最小高さ保証 */
+      aspect-ratio: 16/10;    /* 16:10 の縦横比を維持 */
+      width: 100%;
       box-shadow: 0 24px 60px var(--shadow-hero);
     }
 
@@ -735,7 +735,8 @@
     }
 
     .about {
-      background: var(--bg-alt);
+      background: #F0EEEA !important;
+      color: #2A2826 !important;
       padding: var(--section-py) 0;
       text-align: center;
     }
@@ -778,8 +779,8 @@
       width: 56px;
       height: 56px;
       border-radius: 50%;
-      background: var(--accent-light);
-      color: var(--accent);
+      background: #7C9A8E;
+      color: #fff;
       font-family: var(--font-serif);
       font-size: 1.1rem;
       display: flex;
@@ -1529,17 +1530,17 @@
         <div class="about-text">
           <p class="fade-in">
             小さなお店には、<br>
-            小さなお店にふさわしいホームページがある。
+            小さなお店にふさわしいホームページがあると考えています。
           </p>
           <p class="fade-in">
             テンプレートではなく、<br>
             そのお店の空気感まで伝わるものを、<br>
-            一つひとつ手で仕上げている。
+            一つひとつ手で仕上げています。
           </p>
           <p class="fade-in">
-            余計なものは入れない。<br>
+            余計なものは入れません。<br>
             だから速くて、安全で、壊れない。<br>
-            更新はLINEで一言、当日中に届ける。
+            更新はLINEで一言、当日中に反映します。
           </p>
         </div>
       </div>
