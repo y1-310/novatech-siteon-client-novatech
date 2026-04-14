@@ -267,6 +267,18 @@
       color: var(--text);
     }
 
+    /* scrolled時のCTAボタンはセージグリーン+白文字 */
+    header.scrolled .btn-primary,
+    header.menu-open .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    header.scrolled .btn-primary:hover,
+    header.menu-open .btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
     #hamburger {
       display: none;
       width: 44px;
@@ -391,11 +403,20 @@
       display: grid;
       grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
       gap: 48px;
-      align-items: center;
+      align-items: stretch;
+    }
+
+    /* 右カラム: スライドが縦いっぱいに広がるようにflex縦積み */
+    .hero-visual {
+      display: flex;
+      flex-direction: column;
     }
 
     .hero-copy {
       max-width: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .hero h1 {
@@ -428,15 +449,19 @@
       position: relative;
       border-radius: var(--r);
       overflow: hidden;
-      min-height: 340px;
+      flex: 1;                /* hero-visual の残り高さを全て占有 */
+      min-height: 400px;      /* モバイル等での最小高さ保証 */
+      box-shadow: 0 24px 60px var(--shadow-hero);
     }
 
     .hero-slides img {
+      position: absolute;
+      inset: 0;
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
       display: block;
-      border-radius: var(--r);
-      box-shadow: 0 24px 60px var(--shadow-hero);
     }
 
     .hero-slide {
@@ -447,7 +472,6 @@
     }
 
     .hero-slide.active {
-      position: relative;
       opacity: 1;
     }
 
@@ -579,8 +603,8 @@
       margin-top: 36px;
     }
 
-    /* hidden属性をdisplay:gridで上書きさせない */
-    .works-panel[hidden] { display: none; }
+    /* hidden属性をdisplay:gridで上書きさせない（!importantで確実に隠す） */
+    .works-panel[hidden] { display: none !important; }
 
     .works-panel {
       display: grid;
@@ -1668,6 +1692,8 @@
       </div>
     </section>
   </main>
+
+  <hr class="section-divider">
 
   <section class="closing" aria-labelledby="closing-title">
     <div class="container">
