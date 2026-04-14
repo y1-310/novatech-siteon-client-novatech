@@ -389,7 +389,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
       gap: 48px;
       align-items: center;
     }
@@ -579,6 +579,9 @@
       margin-top: 36px;
     }
 
+    /* hidden属性をdisplay:gridで上書きさせない */
+    .works-panel[hidden] { display: none; }
+
     .works-panel {
       display: grid;
       grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr);
@@ -706,7 +709,7 @@
     }
 
     .about {
-      background: linear-gradient(180deg, var(--bg-alt) 0%, var(--section-grad-end) 100%);
+      background: var(--bg-alt);
       padding: var(--section-py) 0;
       text-align: center;
     }
