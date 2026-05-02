@@ -611,21 +611,19 @@
     .works-panel {
       display: grid;
       grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr);
-      gap: 40px;
+      gap: 56px;
       align-items: center;
     }
 
     .mockup {
       border-radius: var(--r);
       overflow: hidden;
-      box-shadow: 0 16px 48px var(--shadow-mockup);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      transition: transform 0.4s ease;
       background: var(--bg);
     }
 
     .mockup:hover {
       transform: translateY(-4px);
-      box-shadow: 0 32px 80px var(--shadow-mockup-hover);
     }
 
     .mockup-bar {
@@ -822,7 +820,7 @@
     .faq-grid {
       display: grid;
       grid-template-columns: minmax(0, calc(100% - 360px)) 320px;
-      gap: 40px;
+      gap: 56px;
       align-items: start;
       margin-top: 48px;
     }
@@ -894,8 +892,7 @@
 
     .faq-cta {
       background: var(--bg);
-      border-radius: var(--r);
-      padding: 36px 28px;
+      padding: 48px 40px;
       position: sticky;
       top: 88px;
       display: flex;
@@ -972,8 +969,7 @@
 
     .contact-form {
       background: var(--bg-alt);
-      border-radius: var(--r);
-      padding: 32px;
+      padding: 44px;
     }
 
     .form-group {
