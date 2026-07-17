@@ -735,7 +735,11 @@
       line-height: 2.2;
       color: var(--text);
       margin: 0 0 2.4em;
+      /* keep-all 単独では CJK 連続（16px × 28字 = 448px）が分割されず 343px の
+         コンテナを溢れるため overflow-wrap を併用する（japanese-copy-guide.md 456-468）。
+         word-break:normal でも溢れは直るが読点位置の改行が崩れるため使わない。 */
       word-break: keep-all;
+      overflow-wrap: anywhere;
     }
 
     .flow {
