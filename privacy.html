@@ -208,7 +208,58 @@
         align-items: flex-start;
       }
     }
-  </style>
+  
+    /* ============================================================
+       モバイル安全ベースライン v1.0 — _common/mobile-safety.md 準拠
+       自動検査: node ../novatech-siteon-skills/tools/check-mobile.js .
+       個別に書き換えないこと。仕様変更はマスター側で行う。
+       ============================================================ */
+    :root {
+      --mb-header-h: 64px;
+      --mb-tap-min: 44px;
+    }
+
+    /* 1. 日本語の折り返し
+       word-break: keep-all 単独では CJK 連続が分割されず、コンテナ幅を超えて
+       右端が切れる。overflow-wrap は継承プロパティなので body だけに指定すると、
+       個別に break-word を当てた要素で溢れが残る。 */
+    body,
+    body * {
+      overflow-wrap: anywhere;
+    }
+
+    /* 2. アンカーの着地点を固定ヘッダーの下に出す */
+    [id] {
+      scroll-margin-top: calc(var(--mb-header-h) + 12px);
+    }
+
+    /* 3. 画像は必ず枠内に収める */
+    img, video, svg, canvas, iframe {
+      max-width: 100%;
+    }
+
+    /* 4. タップ領域 44x44 の確保
+       上下 padding で当たり判定を広げ、負マージンで見た目の位置を維持する。 */
+    @media (pointer: coarse) {
+      input,
+      select,
+      textarea {
+        font-size: 16px;
+      }
+
+      .back-link {
+        margin-top: 24px;
+        padding: 8px 0;
+      }
+
+      .site-header .brand,
+      .site-footer a {
+        display: inline-flex;
+        align-items: center;
+        min-height: var(--mb-tap-min);
+      }
+    }
+</style>
 </head>
 <body>
   <header class="site-header">

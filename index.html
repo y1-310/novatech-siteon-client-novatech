@@ -1223,6 +1223,12 @@
         gap: 40px;
       }
 
+      /* 「そのままホームページに。」が1行に収まるサイズまで落とす。
+         収まらないと折り返して句点だけが3行目に落ちる（375px で 346px > 343px）。 */
+      .hero h1 {
+        font-size: clamp(1.4rem, 6.6vw, 1.8rem);
+      }
+
       .hero-cta,
       .closing-cta {
         flex-direction: column;
@@ -1299,7 +1305,121 @@
         animation: none;
       }
     }
-  </style>
+  
+    /* ============================================================
+       モバイル安全ベースライン v1.0 — _common/mobile-safety.md 準拠
+       自動検査: node ../novatech-siteon-skills/tools/check-mobile.js .
+       個別に書き換えないこと。仕様変更はマスター側で行う。
+       ============================================================ */
+    :root {
+      --mb-header-h: 64px;
+      --mb-tap-min: 44px;
+      --mb-sticky-cta-h: 78px;
+    }
+
+    /* 1. 日本語の折り返し
+       word-break: keep-all 単独では CJK 連続が分割されず、コンテナ幅を超えて
+       右端が切れる（横スクロールの主因）。overflow-wrap は継承プロパティなので
+       body だけに指定すると、個別に break-word を当てた要素で溢れが残る。
+       grid / flex の min-content 幅にも効かせるため全要素に指定する。 */
+    body,
+    body * {
+      overflow-wrap: anywhere;
+    }
+
+    /* 2. アンカーの着地点を固定ヘッダーの下に出す */
+    [id] {
+      scroll-margin-top: calc(var(--mb-header-h) + 12px);
+    }
+
+    /* 4. 画像は必ず枠内に収める */
+    img, video, svg, canvas, iframe {
+      max-width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      /* 5. 下部スティッキーCTAが最後の要素を隠さないようにする
+         （バー実高 78px に対し余白 60px だと footer が隠れていた） */
+      body {
+        padding-bottom: calc(var(--mb-sticky-cta-h) + env(safe-area-inset-bottom));
+      }
+
+      .sticky-cta {
+        padding-bottom: calc(12px + env(safe-area-inset-bottom));
+      }
+
+      /* 6. 実機で読めない極小文字の下限（日本語は12px未満だと潰れる） */
+      .section-no,
+      .mockup-url {
+        font-size: 12px;
+      }
+    }
+
+    /* 7. タップ領域 44x44 の確保（見た目は変えず当たり判定だけ広げる） */
+    @media (pointer: coarse) {
+      /* 3. iOS の入力時オートズーム防止（16px 未満だとフォーカス時に拡大される）
+         マウス環境の見た目は変えないよう、タッチ端末だけに効かせる。 */
+      input,
+      select,
+      textarea {
+        font-size: 16px;
+      }
+
+      .logo {
+        display: inline-flex;
+        align-items: center;
+        min-height: var(--mb-tap-min);
+      }
+
+      /* padding を足すと高さが増え、top:-40px では画面上端に見切れる */
+      .skip-nav {
+        padding: 12px 16px;
+        top: -64px;
+      }
+
+      /* 上下 padding で当たり判定を広げ、負マージンで見た目の位置を維持する */
+      .demo-link {
+        margin-top: 10px;
+        padding: 10px 0;
+      }
+
+      .contact-line {
+        margin-top: 14px;
+        padding: 10px 0;
+      }
+
+      .privacy-note a,
+      .footer-nav a,
+      #mobile-menu nav a {
+        display: inline-block;
+        padding: 14px 0;
+        margin: -14px 0;
+      }
+
+      .footer-brand a[aria-label] {
+        min-width: var(--mb-tap-min);
+        min-height: var(--mb-tap-min);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* ドットは見た目 8px のまま、当たり判定だけ 44px にする */
+      .hero-indicators .dot {
+        position: relative;
+      }
+
+      .hero-indicators .dot::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: var(--mb-tap-min);
+        height: var(--mb-tap-min);
+        transform: translate(-50%, -50%);
+      }
+    }
+</style>
 </head>
 <body>
   <a href="#main" class="skip-nav">メインコンテンツへスキップ</a>
@@ -1903,7 +2023,7 @@
             }
           });
         }, {
-          threshold: 0.2,
+          threshold: 0.01,
           rootMargin: '0px 0px -40px 0px'
         });
 
