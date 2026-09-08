@@ -22,9 +22,11 @@
       --bg-dark: #2A2826;
       --text: #2A2826;
       --text-mid: #6B6560;
-      --text-light: #9B958E;
+      --text-light: #9B958E;      /* 暗いセクション・フッター用 */
+      --text-muted: #716B64;      /* 明るい地の補助テキスト用。WCAG AA 4.5:1 を満たす */
       --text-on-dark: #E5E0DA;
-      --accent: #7C9A8E;
+      --accent: #7C9A8E;          /* ブランド色。面・線に使う */
+      --accent-text: #587268;     /* 文字として使う場合。WCAG AA 4.5:1 を満たす */
       --accent-hover: #658577;
       --accent-light: #E8F0EC;
       --sub-accent: #A8BCC4;
@@ -130,7 +132,7 @@
       font-family: var(--font-serif);
       font-size: 0.72rem;
       font-weight: 400;
-      color: var(--text-light);
+      color: var(--text-muted);
       letter-spacing: 0.1em;
       margin: 0 0 4px;
     }
@@ -525,7 +527,7 @@
       font-style: italic;
       font-size: 1rem;
       font-weight: 300;
-      color: var(--text-light);
+      color: var(--text-muted);
       letter-spacing: 0.02em;
     }
 
@@ -948,7 +950,7 @@
     .contact-line {
       display: inline-block;
       margin-top: 24px;
-      color: var(--accent);
+      color: var(--accent-text);
       text-decoration: none;
       font-size: 0.92rem;
       letter-spacing: 0.02em;
@@ -972,7 +974,7 @@
     }
 
     .required {
-      color: var(--accent);
+      color: var(--accent-text);
       font-size: 0.78rem;
       margin-left: 4px;
     }
@@ -1007,12 +1009,12 @@
     .privacy-note {
       font-family: var(--font-ja);
       font-size: 0.8rem;
-      color: var(--text-light);
+      color: var(--text-muted);
       margin: 0 0 16px;
     }
 
     .privacy-note a {
-      color: var(--accent);
+      color: var(--accent-text);
     }
 
     .closing {
@@ -1766,7 +1768,7 @@
             </div>
             <div class="form-group">
               <label for="email">メールアドレス <span class="required">必須</span></label>
-              <input type="email" id="email" name="email" required autocomplete="email">
+              <input type="email" id="email" name="email" required autocomplete="email" spellcheck="false">
             </div>
             <div class="form-group">
               <label for="genre">業種</label>
