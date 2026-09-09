@@ -1654,6 +1654,20 @@
       word-break: keep-all;
       overflow-wrap: break-word;
     }
+
+    @media (max-width: 767px) {
+      /* 番号を左に置くと本文の幅が 4rem 分削られ、「LINEで一言。」の句点だけが
+         行頭に落ちていた。モバイルでは番号を上に出して本文に全幅を渡す。 */
+      .flow-step {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 6px;
+      }
+
+      .step-num {
+        font-size: var(--t-caption);
+        letter-spacing: 0.18em;
+      }
+    }
 </style>
 </head>
 <body>
