@@ -511,38 +511,9 @@
       letter-spacing: 0.06em;
     }
 
-    .marquee {
-      background: var(--bg-alt);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      padding: 18px 0;
-      overflow: hidden;
-    }
 
-    .marquee-track {
-      display: flex;
-      white-space: nowrap;
-      animation: marquee 30s linear infinite;
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: 1rem;
-      font-weight: 300;
-      color: var(--text-muted);
-      letter-spacing: 0.02em;
-    }
 
-    .marquee-track span {
-      padding-right: 32px;
-    }
 
-    @keyframes marquee {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-50%);
-      }
-    }
 
     .works,
     .about,
@@ -1162,6 +1133,20 @@
       transform: none;
     }
 
+
+    /* ===== タイポ・余白レイヤー（2026-09-09 / A/B検証で採用したタイポ）=====
+       bloom で before/after を実測して採用。配色・装飾・文言は変更しない。
+       必ず mobile-safety のメディアクエリより前に置く。
+       後ろに置くと 12px 下限などの安全ルールを詳細度なしで打ち消す。 */
+
+    .section-head { gap: 2px; margin-bottom: clamp(36px, 4.5vw, 64px); }
+    .section-en {
+      font-size: clamp(2.4rem, 6.4vw, 4.5rem);
+      line-height: 0.98;
+      letter-spacing: 0.01em;
+    }
+    .section-ja { font-size: 0.78rem; letter-spacing: 0.14em; }
+
     @media (max-width: 1024px) {
       :root {
         --section-py: 88px;
@@ -1295,7 +1280,6 @@
         transform: none;
       }
 
-      .marquee-track,
       .hero-slide,
       .mockup,
       .dot,
@@ -1535,12 +1519,7 @@
       </div>
     </section>
 
-    <section class="marquee" aria-label="サービス特長">
-      <div class="marquee-track">
-        <span>Handcrafted HTML — Lighthouse 100 — No WordPress — No Templates — Fast &amp; Secure — LINE Support — </span>
-        <span>Handcrafted HTML — Lighthouse 100 — No WordPress — No Templates — Fast &amp; Secure — LINE Support — </span>
-      </div>
-    </section>
+    
 
     <hr class="section-divider">
 
