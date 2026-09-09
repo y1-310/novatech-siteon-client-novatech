@@ -578,8 +578,8 @@
       margin-top: 36px;
     }
 
-    /* hidden属性をdisplay:gridで上書きさせない（!importantで確実に隠す） */
-    .works-panel[hidden] { display: none !important; }
+    /* hidden属性をdisplay:gridで上書きさせない。[hidden] の方が詳細度が高いので !important は要らない */
+    .works-panel[hidden] { display: none; }
 
     .works-panel {
       display: grid;
@@ -635,7 +635,7 @@
       color: var(--text-mid);
       background: var(--mockup-url-bg);
       padding: 2px 10px;
-      border-radius: 3px;
+      border-radius: var(--r);
     }
 
     .mockup img {
@@ -689,8 +689,8 @@
     }
 
     .about {
-      background: #F0EEEA !important;
-      color: #2A2826 !important;
+      background: #F0EEEA;
+      color: #2A2826;
       padding: var(--section-py) 0;
       text-align: center;
     }
