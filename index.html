@@ -1245,7 +1245,9 @@
       .hero h1 {
         /* モバイルでも見出しは大きく取る。t-subheading だと 19px まで落ちて
            「monumental letters」の意図が消える。 */
-        font-size: clamp(1.7rem, 8.4vw, 2.5rem);
+        /* 8.4vw だと2行目に必要な幅が使える幅の1.09倍になり、3行に割れていた。
+           320〜430px で2行に収まる上限が 7.4vw（実測）。<wbr> は保険として残す。 */
+        font-size: clamp(1.45rem, 7.4vw, 2.5rem);
         line-height: 1.32;
       }
 
@@ -1623,6 +1625,26 @@
       word-break: keep-all;
       overflow-wrap: break-word;
     }
+
+    /* ===== ヒーロー見出しの折り返し =====
+       実機（iPhone 17 Pro / 402pt）で「そのままホームページ / に。」と
+       「に。」だけが3行目に落ちていた。2行目に必要な幅が使える幅の 1.09〜1.13 倍で、
+       mobile-safety の overflow-wrap: anywhere がどこでも折るため。
+       文字を小さくするのではなく、keep-all で語をまとめ、<wbr> で折れる位置を作る。 */
+    .hero h1 {
+      overflow-wrap: break-word;
+    }
+
+    /* ===== 画面下の固定CTA =====
+       ヒーローのCTAと同じ文言のボタンが同時に2つ見えていた。
+       ヒーローのCTAが見えている間は引っ込める。JSが動かない環境では出したままにする。 */
+    .sticky-cta {
+      transition: transform 0.28s ease;
+    }
+
+    .sticky-cta.is-hidden {
+      transform: translateY(110%);
+    }
 </style>
 </head>
 <body>
@@ -1677,7 +1699,7 @@
         <div class="hero-copy fade-in visible">
           <h1 id="hero-title">
             お店の「らしさ」を、<br>
-            そのままホームページに。
+            そのまま<wbr>ホームページに。
           </h1>
           <div class="hero-foot">
             <p class="hero-sub">
@@ -2043,6 +2065,20 @@
   <div class="sticky-cta" aria-label="スマートフォン用CTA">
     <a href="#contact" class="btn-primary">無料で相談する</a>
   </div>
+
+  <script>
+    // ヒーローのCTAが画面内にある間は、下の固定CTAを引っ込める。
+    // 同じ文言のボタンが2つ同時に見えている状態を避ける。
+    (() => {
+      const sticky = document.querySelector('.sticky-cta');
+      const heroCta = document.querySelector('.hero-cta');
+      if (!sticky || !heroCta || !('IntersectionObserver' in window)) return;
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => sticky.classList.toggle('is-hidden', e.isIntersecting));
+      }, { threshold: 0 });
+      io.observe(heroCta);
+    })();
+  </script>
 
   <script>
     // セクションまでヘッダー分を考慮してスクロールする
