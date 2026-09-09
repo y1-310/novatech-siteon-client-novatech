@@ -1614,6 +1614,15 @@
     .works-info {
       justify-content: flex-start;
     }
+
+    /* About の本文が「仕上げてい / ます」「翌営業 / 日までに」と語中で割れていた。
+       keep-all で文節を保ち、収まらないときだけ break-word に逃がす。
+       読点で折り返すため、40em の幅では読点が改行位置になる。 */
+    .about-lead,
+    .about-text p {
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
 </style>
 </head>
 <body>
@@ -1806,8 +1815,7 @@
         <p class="about-label" lang="en">02 — About</p>
         <div class="about-text">
           <h2 class="about-lead fade-in" id="about-title">
-            小さなお店には、小さなお店にふさわしい<br>
-            ホームページがあると考えています。
+            お店一つひとつに、<wbr>ふさわしい<wbr>ホームページが<wbr>あると<wbr>考えています。
           </h2>
           <p class="fade-in">
             テンプレートではなく、そのお店の空気感まで伝わるものを、一つひとつ手で仕上げています。
@@ -2000,7 +2008,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <p class="footer-logo">SateOn</p>
-          <p class="footer-desc">小さなお店のためのサブスク型ホームページ制作サービス</p>
+          <p class="footer-desc">お店のためのサブスク型ホームページ制作サービス</p>
           <a href="https://www.instagram.com/novatech_jp/" target="_blank" rel="noopener" aria-label="Instagram (@novatech_jp)">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
