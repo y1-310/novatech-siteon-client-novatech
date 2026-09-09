@@ -1645,6 +1645,15 @@
     .sticky-cta.is-hidden {
       transform: translateY(110%);
     }
+
+    /* 手順の本文が「LINEで一 / 言。」と語中で割れていた（実機 402pt で確認）。
+       About と同じく、句読点で折り返して収まらないときだけ break-word に逃がす。 */
+    .flow-step h3,
+    .flow-step p,
+    .faq-item p {
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
 </style>
 </head>
 <body>
