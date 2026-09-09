@@ -67,6 +67,9 @@
       --t-subheading: clamp(1.2rem, 2.2vw, 1.6rem);
       --t-heading: clamp(1.8rem, 3.5vw, 2.6rem);
       --t-display: clamp(2.4rem, 6.4vw, 4.5rem);
+      /* ヒーロー専用。セクション見出し(display)より一段上に置く。
+         Coda の display-lg にあたる。 */
+      --t-display-lg: clamp(2.6rem, 7.4vw, 5.6rem);
 
       --lh-display: 1.14;
       --lh-heading: 1.45;
@@ -129,7 +132,10 @@
 
     .skip-nav {
       position: absolute;
-      top: -40px;
+      /* 高さ43pxに対して -40px だったため、常に3pxだけ黒帯が見えていた。
+         位置ではなく変形で完全に外へ出す。 */
+      top: 0;
+      transform: translateY(-150%);
       left: 16px;
       background: var(--text);
       color: var(--text-on-dark);
@@ -141,7 +147,7 @@
     }
 
     .skip-nav:focus {
-      top: 16px;
+      transform: translateY(0);
     }
 
     .container {
@@ -217,8 +223,8 @@
 
     .btn-outline {
       background: var(--transparent);
-      border: 1px solid var(--border-outline);
-      color: var(--white);
+      border: 1px solid var(--line);
+      color: var(--text);
       border-radius: var(--r);
       padding: 14px 28px;
       font-family: var(--font-ja);
@@ -269,7 +275,7 @@
       font-family: var(--font-serif);
       font-size: var(--t-subheading);
       letter-spacing: 0.06em;
-      color: var(--text-on-dark);
+      color: var(--text);
       text-decoration: none;
       transition: color 0.25s ease;
     }
@@ -287,7 +293,7 @@
 
     .desktop-nav a {
       font-size: var(--t-caption);
-      color: var(--text-on-dark);
+      color: var(--text-mid);
       text-decoration: none;
       transition: color 0.25s ease;
     }
@@ -422,9 +428,10 @@
     }
 
     .hero {
-      background:
-        radial-gradient(circle at 80% 20%, var(--overlay-hero) 0%, var(--transparent) 60%),
-        var(--bg-dark);
+      /* 制作会社の顔が暗い茶一色だった。Programa の「白い壁に照明ひとつ」に倣い、
+         地を紙にして、色はCTAだけに配給する。 */
+      background: var(--bg);
+      border-bottom: 1px solid var(--line);
       padding: 160px 0 120px;
       overflow: hidden;
     }
@@ -440,8 +447,8 @@
     .hero-visual {
       display: flex;
       flex-direction: column;
-      /* デスクトップ: 右端をビューポート外にはみ出させる（.hero overflow:hidden でクリップ） */
-      width: 130%;
+      /* 見出しの下に全幅で置くため、はみ出しはやめる（旧2カラム時の名残） */
+      width: 100%;
     }
 
     .hero-copy {
@@ -453,10 +460,10 @@
 
     .hero h1 {
       font-family: var(--font-mincho);
-      font-size: var(--t-heading);
+      font-size: var(--t-display-lg);
       font-weight: 400;
-      color: var(--white);
-      line-height: 1.7;
+      color: var(--text);
+      line-height: 1.18;
       word-break: keep-all;
       margin: 0;
     }
@@ -465,7 +472,7 @@
       font-family: var(--font-ja);
       font-size: var(--t-small);
       font-weight: 300;
-      color: var(--text-on-dark);
+      color: var(--text-mid);
       line-height: 1.9;
       margin: 24px 0 0;
     }
@@ -483,7 +490,7 @@
       overflow: hidden;
       aspect-ratio: 16/10;    /* 16:10 の縦横比を維持 */
       width: 100%;
-      box-shadow: 0 24px 60px var(--shadow-hero);
+      border: 1px solid var(--line);
     }
 
     .hero-slides img {
@@ -534,7 +541,7 @@
       text-align: center;
       font-family: var(--font-ja);
       font-size: var(--t-caption);
-      color: var(--text-light);
+      color: var(--text-muted);
       margin: 6px 0 0;
       letter-spacing: 0.06em;
     }
@@ -717,88 +724,24 @@
     }
 
     .about {
-      background: #F0EEEA;
-      color: #2A2826;
-      padding: var(--section-py) 0;
-      text-align: center;
-    }
-
-    .about-text {
-      max-width: 640px;
-      margin: 56px auto 0;
-      text-align: center;
-    }
-
-    .about-text p {
-      font-family: var(--font-mincho);
-      font-size: var(--t-body);
-      font-weight: 400;
-      line-height: 2.2;
+      background: var(--bg-alt);
       color: var(--text);
-      margin: 0 0 2.4em;
-      /* keep-all 単独では CJK 連続（16px × 28字 = 448px）が分割されず 343px の
-         コンテナを溢れるため overflow-wrap を併用する（japanese-copy-guide.md 456-468）。
-         word-break:normal でも溢れは直るが読点位置の改行が崩れるため使わない。 */
-      word-break: keep-all;
-      overflow-wrap: anywhere;
+      padding: var(--section-py) 0;
+      text-align: left;
     }
+
+
 
     .flow {
       background: var(--bg);
       padding: var(--section-py) 0;
     }
 
-    .flow-steps {
-      display: flex;
-      align-items: flex-start;
-      gap: 0;
-      margin-top: 56px;
-    }
 
-    .flow-step {
-      flex: 1;
-      text-align: center;
-      padding: 0 24px;
-    }
 
-    .step-num {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: #7C9A8E;
-      color: #fff;
-      font-family: var(--font-serif);
-      font-size: var(--t-lead);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-    }
 
-    .flow-step h3 {
-      font-family: var(--font-mincho);
-      font-size: var(--t-body);
-      color: var(--text);
-      margin: 0 0 10px;
-      word-break: keep-all;
-    }
 
-    .flow-step p {
-      font-family: var(--font-ja);
-      font-size: var(--t-small);
-      font-weight: 300;
-      color: var(--text-mid);
-      line-height: 1.8;
-      margin: 0;
-    }
 
-    .flow-connector {
-      flex-shrink: 0;
-      width: 40px;
-      height: 1px;
-      background: var(--line);
-      margin-top: 28px;
-    }
 
     .faq {
       background: var(--bg-alt);
@@ -1194,6 +1137,41 @@
     .btn:lang(ja),
     .button:lang(ja) { letter-spacing: 0.04em; }
 
+
+    /* ===== ヒーロー再構成（Coda の「carved signage」に倣う）=====
+       見出しを2fr幅のカラムに押し込んでいたため、1200px でも3行に割れて
+       「に。」が行頭に孤立していた。見出しを全幅にして、
+       リード文とCTAは1本の罫線の下に左右で置く。 */
+    .hero-copy {
+      max-width: none;
+    }
+
+    .hero h1 {
+      max-width: 20em;
+    }
+
+    .hero-foot {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: clamp(20px, 3vw, 40px);
+      align-items: end;
+      margin-top: clamp(28px, 3.5vw, 48px);
+      padding-top: clamp(22px, 2.6vw, 34px);
+      border-top: 1px solid var(--line);
+    }
+
+    .hero-foot .hero-sub {
+      margin: 0;
+    }
+
+    .hero-foot .hero-cta {
+      margin: 0;
+    }
+
+    .hero-visual {
+      margin-top: clamp(36px, 4.5vw, 72px);
+    }
+
     @media (max-width: 1024px) {
       :root {
         --section-py: 88px;
@@ -1225,6 +1203,11 @@
     }
 
     @media (max-width: 768px) {
+      .hero-foot {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+      }
+
       :root {
         --section-py: 72px;
       }
@@ -1260,7 +1243,10 @@
       /* 「そのままホームページに。」が1行に収まるサイズまで落とす。
          収まらないと折り返して句点だけが3行目に落ちる（375px で 346px > 343px）。 */
       .hero h1 {
-        font-size: var(--t-subheading);
+        /* モバイルでも見出しは大きく取る。t-subheading だと 19px まで落ちて
+           「monumental letters」の意図が消える。 */
+        font-size: clamp(1.7rem, 8.4vw, 2.5rem);
+        line-height: 1.32;
       }
 
       .hero-cta,
@@ -1287,15 +1273,7 @@
         padding-inline: 14px;
       }
 
-      .flow-steps {
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-      }
 
-      .flow-connector {
-        display: none;
-      }
 
       .faq-cta {
         display: none;
@@ -1473,6 +1451,169 @@
         transform: translate(-50%, -50%);
       }
     }
+
+    /* ===== 手順（丸数字と点線をやめる）=====
+       円で囲んだ数字を横に3つ並べて点線でつなぐ形は、量産されたLPの型そのもの。
+       Programa / Coda が使う「1本の罫線で行を区切る」に置き換える。 */
+    .flow-steps {
+      list-style: none;
+      margin: clamp(28px, 3.5vw, 48px) 0 0;
+      padding: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .flow-step {
+      display: grid;
+      grid-template-columns: minmax(0, 6rem) minmax(0, 1fr);
+      gap: clamp(16px, 3vw, 40px);
+      align-items: baseline;
+      padding: clamp(20px, 2.6vw, 32px) 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .step-num {
+      font-family: var(--font-serif);
+      font-size: var(--t-subheading);
+      color: var(--text-light);
+      letter-spacing: 0.08em;
+    }
+
+    .flow-step h3 {
+      margin: 0 0 6px;
+      font-family: var(--font-mincho);
+      font-size: var(--t-lead);
+      font-weight: 400;
+      color: var(--text);
+    }
+
+    .flow-step p {
+      margin: 0;
+      font-size: var(--t-small);
+      color: var(--text-mid);
+    }
+
+    /* Flow だけ見出しを左に置いて本文を右に流す。
+       全セクションが「番号→英字→和文→中身」の同じ並びだと、量産された型に見える。 */
+    .flow .container {
+      display: grid;
+      grid-template-columns: minmax(0, 17rem) minmax(0, 1fr);
+      gap: clamp(28px, 5vw, 72px);
+      align-items: start;
+    }
+
+    .flow-steps {
+      margin-top: 0;
+    }
+
+    .flow-step {
+      grid-template-columns: minmax(0, 4rem) minmax(0, 1fr);
+    }
+
+    @media (max-width: 767px) {
+      .flow .container {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .flow-steps {
+        margin-top: 24px;
+      }
+    }
+
+    /* ===== About を「声明」として組み直す =====
+       全文が中央寄せで、しかも他セクションと同じ「番号→英字→和文」の並びだった。
+       長い日本語の中央寄せは読みにくく、同じ並びの繰り返しは型に見える。
+       ここだけ英字見出しをやめ、言っていること自体を見出しにする。 */
+    .about-label {
+      margin: 0 0 clamp(20px, 2.6vw, 36px);
+      font-family: var(--font-serif);
+      font-size: var(--t-caption);
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+    }
+
+    .about-text {
+      max-width: 40em;
+      text-align: left;
+    }
+
+    .about-lead {
+      margin: 0 0 clamp(22px, 2.8vw, 36px);
+      font-family: var(--font-mincho);
+      font-size: clamp(1.35rem, 2.8vw, 2.05rem);
+      font-weight: 400;
+      line-height: 1.85;
+      color: var(--text);
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
+
+    .about-text p {
+      margin: 0 0 16px;
+      font-size: var(--t-body);
+      line-height: 2;
+      color: var(--text-mid);
+      text-align: left;
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ===== 暗いセクション上のボタン =====
+       ヒーローを紙にしたときに .btn-outline の文字色を濃色へ変えたが、
+       同じクラスが closing（暗い帯）でも使われており、暗地に濃色で 1.00 になっていた。
+       暗い面の上だけ明色に戻す。 */
+    .closing .btn-outline,
+    .footer .btn-outline {
+      color: var(--text-on-dark);
+      border-color: rgba(229, 224, 218, 0.42);
+    }
+
+    .closing .btn-outline:hover,
+    .footer .btn-outline:hover {
+      background: rgba(229, 224, 218, 0.12);
+      color: var(--text-on-dark);
+    }
+
+    /* 暗い帯の上では、塗りボタンは明るい面にして文字を濃くする */
+    .closing .btn-primary,
+    .footer .btn-primary {
+      background: var(--accent);
+      color: var(--text);
+    }
+
+    /* 手順の番号。--text-light は紙の上で 2.79 しかなかった（大きめ文字でも 3 が必要） */
+    .step-num {
+      color: var(--text-muted);
+    }
+
+    /* ヘッダーのナビ文字を濃色にしたとき、同じ nav の中にある CTA まで
+       .desktop-nav a (0,1,1) が .btn-primary (0,1,0) を上書きして 2.56 になっていた。 */
+    .desktop-nav a.btn-primary {
+      color: var(--text-on-dark);
+    }
+
+    /* ===== 塗りの箱をやめて1px罫線にする =====
+       Programa「hairline borders ... zero shadow noise」
+       Coda「Every surface is bordered, not shadowed」
+       FAQ の相談ボックスと問い合わせフォームだけが塗り面で、
+       ページの中で2つだけ浮いた箱になっていた。 */
+    .faq-cta {
+      background: transparent;
+      border: 1px solid var(--line);
+      padding: clamp(28px, 3vw, 40px) clamp(24px, 2.6vw, 32px);
+    }
+
+    .contact-form {
+      background: transparent;
+      border: 1px solid var(--line);
+      padding: clamp(28px, 3.2vw, 44px);
+    }
+
+    /* 事例の説明は画像の上端に揃える（縦中央だと画像との関係が読めない） */
+    .works-info {
+      justify-content: flex-start;
+    }
 </style>
 </head>
 <body>
@@ -1524,34 +1665,35 @@
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <div class="container">
-        <div class="hero-grid">
-          <div class="hero-copy fade-in visible">
-            <h1 id="hero-title">
-              お店の「らしさ」を、<br>
-              そのままホームページに。
-            </h1>
+        <div class="hero-copy fade-in visible">
+          <h1 id="hero-title">
+            お店の「らしさ」を、<br>
+            そのままホームページに。
+          </h1>
+          <div class="hero-foot">
             <p class="hero-sub">
-              初期費用0円。お店の雰囲気が伝わる<br>
-              ホームページを、月額9,800円から。
+              初期費用0円。お店の雰囲気が伝わるホームページを、<br>
+              月額9,800円から。
             </p>
             <div class="hero-cta">
               <button class="btn-primary" onclick="scrollToSection('contact')" type="button">無料で相談する</button>
               <button class="btn-outline" onclick="scrollToSection('works')" type="button">制作事例を見る</button>
             </div>
           </div>
-          <div class="hero-visual fade-in visible">
+        </div>
+        <div class="hero-visual fade-in visible">
             <div class="hero-slides" aria-label="デモサイトのスクリーンショット">
               <div class="hero-slide active" data-label="美容室">
-                <img src="assets/demo-salon.webp" alt="美容室デモサイト Selqune" width="1200" height="750">
+                <img src="assets/demo-salon.webp" alt="美容室デモサイト BLOOM" width="2400" height="1500">
               </div>
               <div class="hero-slide" data-label="ビストロ">
-                <img src="assets/demo-restaurant.webp" alt="ビストロデモサイト Fraviel Table" width="1200" height="750">
+                <img src="assets/demo-restaurant.webp" alt="ビストロデモサイト Fraviel Table" width="2400" height="1500">
               </div>
               <div class="hero-slide" data-label="建築">
-                <img src="assets/demo-architect.webp" alt="建築設計事務所デモサイト Atelique Mora" width="1200" height="750">
+                <img src="assets/demo-architect.webp" alt="建築設計事務所デモサイト Atelique Mora" width="2400" height="1500">
               </div>
               <div class="hero-slide" data-label="士業">
-                <img src="assets/demo-corporate.webp" alt="税理士事務所デモサイト Seion Ledger" width="1200" height="750">
+                <img src="assets/demo-corporate.webp" alt="税理士事務所デモサイト Seion Ledger" width="2400" height="1500">
               </div>
             </div>
             <div class="hero-indicators" aria-label="ヒーロースライド切り替え">
@@ -1560,8 +1702,7 @@
               <button class="dot" aria-label="建築" type="button"></button>
               <button class="dot" aria-label="士業" type="button"></button>
             </div>
-            <p class="hero-label" id="hero-label-text">美容室</p>
-          </div>
+          <p class="hero-label" id="hero-label-text">美容室</p>
         </div>
       </div>
     </section>
@@ -1591,12 +1732,12 @@
             <div class="mockup">
               <div class="mockup-bar">
                 <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
-                <span class="mockup-url">siteon.jp/demo</span>
+                <span class="mockup-url">bloom-aoyama.jp</span>
               </div>
-              <img src="assets/demo-salon.webp" alt="美容室デモサイト Selqune" width="1200" height="750" loading="lazy">
+              <img src="assets/demo-salon.webp" alt="美容室デモサイト BLOOM" width="2400" height="1500" loading="lazy">
             </div>
             <div class="works-info">
-              <p class="works-site-name">Selqune</p>
+              <p class="works-site-name">BLOOM</p>
               <p class="works-genre">美容室</p>
               <p class="works-desc">落ち着いた空間と確かな技術が光る美容室。シンプルでスタイリッシュなデザインで新規集客を実現。</p>
 
@@ -1608,9 +1749,9 @@
             <div class="mockup">
               <div class="mockup-bar">
                 <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
-                <span class="mockup-url">siteon.jp/demo</span>
+                <span class="mockup-url">fraviel-table.jp</span>
               </div>
-              <img src="assets/demo-restaurant.webp" alt="ビストロデモサイト Fraviel Table" width="1200" height="750" loading="lazy">
+              <img src="assets/demo-restaurant.webp" alt="ビストロデモサイト Fraviel Table" width="2400" height="1500" loading="lazy">
             </div>
             <div class="works-info">
               <p class="works-site-name">Fraviel Table</p>
@@ -1625,9 +1766,9 @@
             <div class="mockup">
               <div class="mockup-bar">
                 <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
-                <span class="mockup-url">siteon.jp/demo</span>
+                <span class="mockup-url">atelique-mora.jp</span>
               </div>
-              <img src="assets/demo-architect.webp" alt="建築設計事務所デモサイト Atelique Mora" width="1200" height="750" loading="lazy">
+              <img src="assets/demo-architect.webp" alt="建築設計事務所デモサイト Atelique Mora" width="2400" height="1500" loading="lazy">
             </div>
             <div class="works-info">
               <p class="works-site-name">Atelique Mora</p>
@@ -1642,9 +1783,9 @@
             <div class="mockup">
               <div class="mockup-bar">
                 <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
-                <span class="mockup-url">siteon.jp/demo</span>
+                <span class="mockup-url">seion-ledger.jp</span>
               </div>
-              <img src="assets/demo-corporate.webp" alt="税理士事務所デモサイト Seion Ledger" width="1200" height="750" loading="lazy">
+              <img src="assets/demo-corporate.webp" alt="税理士事務所デモサイト Seion Ledger" width="2400" height="1500" loading="lazy">
             </div>
             <div class="works-info">
               <p class="works-site-name">Seion Ledger</p>
@@ -1662,25 +1803,17 @@
 
     <section class="about" id="about" aria-labelledby="about-title">
       <div class="container">
-        <div class="about-header">
-          <p class="section-no">02</p>
-          <h2 class="section-en" id="about-title">About</h2>
-          <p class="section-ja">NovaTechについて</p>
-        </div>
+        <p class="about-label" lang="en">02 — About</p>
         <div class="about-text">
+          <h2 class="about-lead fade-in" id="about-title">
+            小さなお店には、小さなお店にふさわしい<br>
+            ホームページがあると考えています。
+          </h2>
           <p class="fade-in">
-            小さなお店には、<br>
-            小さなお店にふさわしいホームページがあると考えています。
+            テンプレートではなく、そのお店の空気感まで伝わるものを、一つひとつ手で仕上げています。
           </p>
           <p class="fade-in">
-            テンプレートではなく、<br>
-            そのお店の空気感まで伝わるものを、<br>
-            一つひとつ手で仕上げています。
-          </p>
-          <p class="fade-in">
-            余計なものは入れません。<br>
-            だから速くて、安全で、壊れない。<br>
-            更新はLINEで一言、翌営業日までに反映します。
+            余計なものは入れません。だから速くて、安全で、壊れない。更新はLINEで一言、翌営業日までに反映します。
           </p>
         </div>
       </div>
@@ -1695,25 +1828,29 @@
           <h2 class="section-en" id="flow-title">Flow</h2>
           <p class="section-ja">ご利用の流れ</p>
         </div>
-        <div class="flow-steps">
-          <div class="flow-step fade-in">
-            <div class="step-num">1</div>
-            <h3>お問い合わせ</h3>
-            <p>フォームまたはLINEからお気軽に。</p>
-          </div>
-          <div class="flow-connector" aria-hidden="true"></div>
-          <div class="flow-step fade-in">
-            <div class="step-num">2</div>
-            <h3>ヒアリング＋制作</h3>
-            <p>お店の雰囲気をお伺いし、サイトを制作。</p>
-          </div>
-          <div class="flow-connector" aria-hidden="true"></div>
-          <div class="flow-step fade-in">
-            <div class="step-num">3</div>
-            <h3>公開＋継続サポート</h3>
-            <p>最短3日で公開。その後の更新はLINEで一言。</p>
-          </div>
-        </div>
+        <ol class="flow-steps">
+          <li class="flow-step fade-in">
+            <span class="step-num" aria-hidden="true">01</span>
+            <div class="flow-body">
+              <h3>お問い合わせ</h3>
+              <p>フォームまたはLINEからお気軽に。</p>
+            </div>
+          </li>
+          <li class="flow-step fade-in">
+            <span class="step-num" aria-hidden="true">02</span>
+            <div class="flow-body">
+              <h3>ヒアリング＋制作</h3>
+              <p>お店の雰囲気をお伺いし、サイトを制作。</p>
+            </div>
+          </li>
+          <li class="flow-step fade-in">
+            <span class="step-num" aria-hidden="true">03</span>
+            <div class="flow-body">
+              <h3>公開＋継続サポート</h3>
+              <p>最短3日で公開。その後の更新はLINEで一言。</p>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
